@@ -8,6 +8,7 @@ import com.intellij.openapi.module.ModuleType;
 import com.intellij.openapi.roots.ModifiableRootModel;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.plugin.genesis.module.wizards.DemoModuleWizardStep;
 
 public class DemoModuleBuilder extends ModuleBuilder {
     private final static DemoModuleType moduleType = new DemoModuleType();
@@ -28,7 +29,6 @@ public class DemoModuleBuilder extends ModuleBuilder {
     public ModuleWizardStep getCustomOptionsStep(WizardContext context, Disposable parentDisposable) {
         return new DemoModuleWizardStep();
     }
-
 
     @NotNull
     @Override
