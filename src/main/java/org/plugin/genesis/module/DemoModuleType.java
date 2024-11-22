@@ -6,7 +6,6 @@ import com.intellij.openapi.module.ModuleType;
 import com.intellij.openapi.roots.ui.configuration.ModulesProvider;
 import org.jetbrains.annotations.NotNull;
 import org.plugin.genesis.icons.SdkIcons;
-import org.plugin.genesis.module.wizards.DemoModuleWizardStep;
 import org.plugin.genesis.module.wizards.FinalModuleWizardStep;
 
 import javax.swing.*;

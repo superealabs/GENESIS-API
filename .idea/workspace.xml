@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/form/NewProject.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/form/NewProject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/wizards/DemoModuleWizardStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/wizards/FinalModuleWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/Run.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/Run.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/action/PopupDialogAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/action/PopupDialogAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleWizardStep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/sdk_16.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons/sdk_16.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +56,6 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -77,6 +73,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KotlinScriptingSettings">
+    <option name="suppressDefinitionsCheck" value="true" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -84,6 +83,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP Herd" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -100,6 +100,7 @@
     &quot;Gradle.Build demo.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Clean.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GENESIS-Plugin [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.GENESIS-Plugin [clean].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.GENESIS-Plugin [setupDependencies].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Run Plugin.executor&quot;: &quot;Run&quot;,
@@ -108,24 +109,22 @@
     &quot;Gradle.demo [setupDependencies].executor&quot;: &quot;Run&quot;,
     &quot;Kotlin script (Beta).build.gradle.kts.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;209&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;580&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nomena/STAGE/GENESIS-Plugin/src/main/resources/icons&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nomena/STAGE/GENESIS-Plugin&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;kotlin-gradle-user-dirs&quot;: [
-      &quot;/Users/nomena/.gradle&quot;
-    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -133,6 +132,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/form" />
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
       <recent name="$PROJECT_DIR$/src/main/resources/icons" />
     </key>
@@ -182,13 +182,37 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="GENESIS-Plugin [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Gradle.Run" />
+      <item itemvalue="Gradle.GENESIS-Plugin [build]" />
       <item itemvalue="Gradle.Clean" />
       <item itemvalue="Gradle.Build" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GENESIS-Plugin [build]" />
         <item itemvalue="Gradle.Clean" />
         <item itemvalue="Gradle.Build" />
       </list>
@@ -197,8 +221,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -228,11 +251,34 @@
       <workItem from="1727099512942" duration="1418000" />
       <workItem from="1727113695992" duration="457000" />
       <workItem from="1727114649531" duration="1943000" />
-      <workItem from="1727116613276" duration="2373000" />
+      <workItem from="1727116613276" duration="9600000" />
+      <workItem from="1727175374326" duration="3934000" />
+      <workItem from="1732131074605" duration="1271000" />
+      <workItem from="1732144174594" duration="70000" />
+      <workItem from="1732155276498" duration="5000" />
+      <workItem from="1732175960420" duration="5337000" />
+      <workItem from="1732198919611" duration="2221000" />
+      <workItem from="1732202202184" duration="2869000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/wizards/DemoModuleWizardStep.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleType.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

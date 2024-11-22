@@ -18,17 +18,17 @@ import org.jetbrains.annotations.NotNull;
  */
 public class PopupDialogAction extends AnAction {
 
-    @Override
-    public @NotNull ActionUpdateThread getActionUpdateThread() {
-        return ActionUpdateThread.BGT;
-    }
-
     /**
      * This default constructor is used by the IntelliJ Platform framework to instantiate this class based on plugin.xml
      * declarations. Only needed in {@link PopupDialogAction} class because a second constructor is overridden.
      */
     public PopupDialogAction() {
         super();
+    }
+
+    @Override
+    public @NotNull ActionUpdateThread getActionUpdateThread() {
+        return ActionUpdateThread.BGT;
     }
 
     @Override
