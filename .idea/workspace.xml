@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.run/Run.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/Run.run.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/action/PopupDialogAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/action/PopupDialogAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/sdk_16.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons/sdk_16.svg" afterDir="false" />
-    </list>
+    <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,7 +248,7 @@
       <workItem from="1732155276498" duration="5000" />
       <workItem from="1732175960420" duration="5337000" />
       <workItem from="1732198919611" duration="2221000" />
-      <workItem from="1732202202184" duration="2869000" />
+      <workItem from="1732202202184" duration="4071000" />
     </task>
     <servers />
   </component>
