@@ -8,11 +8,10 @@ import com.intellij.openapi.module.ModuleType;
 import com.intellij.openapi.roots.ModifiableRootModel;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.plugin.genesis.module.wizards.DemoModuleWizardStep;
+import org.plugin.genesis.module.wizards.InitializationWizardStep;
 
 public class DemoModuleBuilder extends ModuleBuilder {
     private final static DemoModuleType moduleType = new DemoModuleType();
-
 
     @Override
     public void setupRootModel(@NotNull ModifiableRootModel modifiableRootModel) {
@@ -23,22 +22,21 @@ public class DemoModuleBuilder extends ModuleBuilder {
         return moduleType;
     }
 
-
     @Nullable
     @Override
     public ModuleWizardStep getCustomOptionsStep(WizardContext context, Disposable parentDisposable) {
-        return new DemoModuleWizardStep();
+        return new InitializationWizardStep();
     }
 
     @NotNull
     @Override
     public String getName() {
-        return "SDK Module Type";
+        return "GENESIS-API";
     }
 
     @NotNull
     @Override
     public String getDescription() {
-        return "Example custom module type";
+        return "A polyglot code generator ";
     }
 }

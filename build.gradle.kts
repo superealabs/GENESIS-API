@@ -26,16 +26,16 @@ dependencies {
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
-        sourceCompatibility = "21"
-        targetCompatibility = "21"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "21"
+        kotlinOptions.jvmTarget = "17"
     }
 
     patchPluginXml {
-        sinceBuild.set("232")  // Supporte IntelliJ à partir de la version 2023.2
-        untilBuild.set("243.*")  // Supporte IntelliJ jusqu'à la version 2024.3
+        sinceBuild.set("232")  // Supports IntelliJ from version 2023.2
+        untilBuild.set("243.*")  // Supports IntelliJ up to version 2024.3
     }
 
     signPlugin {

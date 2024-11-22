@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="" />
+    <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/form/NewProject.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/wizards/DemoModuleWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/wizards/DemoModuleWizardStep.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -248,27 +253,11 @@
       <workItem from="1732155276498" duration="5000" />
       <workItem from="1732175960420" duration="5337000" />
       <workItem from="1732198919611" duration="2221000" />
-      <workItem from="1732202202184" duration="4071000" />
+      <workItem from="1732202202184" duration="8872000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/wizards/DemoModuleWizardStep.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleType.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -26,7 +26,7 @@ final class DemoModuleType extends ModuleType<DemoModuleBuilder> {
     @NotNull
     @Override
     public String getName() {
-        return "SDK Module Type";
+        return "GENESIS-API";
     }
 
     @NotNull
