@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/DemoModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/form/InitialisationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/form/InitialisationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/form/NewProject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,7 +251,7 @@
       <workItem from="1732198919611" duration="2221000" />
       <workItem from="1732202202184" duration="8872000" />
       <workItem from="1732264199240" duration="12793000" />
-      <workItem from="1732288135572" duration="426000" />
+      <workItem from="1732288135572" duration="1026000" />
     </task>
     <servers />
   </component>
