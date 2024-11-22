@@ -63,7 +63,8 @@
           </grid>
         </constraints>
         <properties>
-          <text value="Name:"/>
+          <labelFor value="a9735"/>
+          <text value="&amp;Name:"/>
         </properties>
       </component>
       <component id="4dd9c" class="javax.swing.JLabel" binding="locationLabel">
@@ -83,6 +84,7 @@
           </grid>
         </constraints>
         <properties>
+          <labelFor value="dd72"/>
           <text value="Language:"/>
         </properties>
       </component>
@@ -93,6 +95,7 @@
           </grid>
         </constraints>
         <properties>
+          <labelFor value="44c4f"/>
           <text value="Language version:"/>
         </properties>
       </component>
@@ -103,6 +106,7 @@
           </grid>
         </constraints>
         <properties>
+          <labelFor value="a38a1"/>
           <text value="Framework:"/>
         </properties>
       </component>
@@ -113,6 +117,7 @@
           </grid>
         </constraints>
         <properties>
+          <labelFor value="a1d59"/>
           <text value="Project type:"/>
         </properties>
       </component>

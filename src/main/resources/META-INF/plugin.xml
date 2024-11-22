@@ -24,7 +24,7 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <moduleBuilder builderClass="org.plugin.genesis.module.DemoModuleBuilder"
+        <moduleBuilder builderClass="org.plugin.genesis.module.GenesisApiModuleBuilder"
                        id="DEMO_STEP"
                        order="first"/>
     </extensions>

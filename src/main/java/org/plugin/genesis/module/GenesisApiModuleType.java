@@ -10,17 +10,17 @@ import org.plugin.genesis.module.wizards.FinalModuleWizardStep;
 
 import javax.swing.*;
 
-final class DemoModuleType extends ModuleType<DemoModuleBuilder> {
+final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
     private static final String ID = "DEMO_MODULE_TYPE";
 
-    DemoModuleType() {
+    GenesisApiModuleType() {
         super(ID);
     }
 
     @NotNull
     @Override
-    public DemoModuleBuilder createModuleBuilder() {
-        return new DemoModuleBuilder();
+    public GenesisApiModuleBuilder createModuleBuilder() {
+        return new GenesisApiModuleBuilder();
     }
 
     @NotNull
@@ -32,7 +32,7 @@ final class DemoModuleType extends ModuleType<DemoModuleBuilder> {
     @NotNull
     @Override
     public String getDescription() {
-        return "Example custom module type";
+        return "Let's build microservices.";
     }
 
     @Override
@@ -42,7 +42,7 @@ final class DemoModuleType extends ModuleType<DemoModuleBuilder> {
 
     @Override
     public ModuleWizardStep @NotNull [] createWizardSteps(@NotNull WizardContext wizardContext,
-                                                          @NotNull DemoModuleBuilder moduleBuilder,
+                                                          @NotNull GenesisApiModuleBuilder moduleBuilder,
                                                           @NotNull ModulesProvider modulesProvider) {
         return new ModuleWizardStep[]{
                 new FinalModuleWizardStep()

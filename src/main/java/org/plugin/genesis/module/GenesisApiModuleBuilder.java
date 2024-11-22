@@ -10,8 +10,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.plugin.genesis.module.wizards.InitializationWizardStep;
 
-public class DemoModuleBuilder extends ModuleBuilder {
-    private final static DemoModuleType moduleType = new DemoModuleType();
+public class GenesisApiModuleBuilder extends ModuleBuilder {
+    private final static GenesisApiModuleType moduleType = new GenesisApiModuleType();
 
     @Override
     public void setupRootModel(@NotNull ModifiableRootModel modifiableRootModel) {
@@ -37,6 +37,6 @@ public class DemoModuleBuilder extends ModuleBuilder {
     @NotNull
     @Override
     public String getDescription() {
-        return "A polyglot code generator ";
+        return "A polyglot code generator";
     }
 }
