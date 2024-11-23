@@ -3,28 +3,38 @@ package org.plugin.genesis.module.form;
 import com.intellij.openapi.fileChooser.FileChooserDescriptor;
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
 import com.intellij.openapi.ui.TextBrowseFolderListener;
-import com.intellij.openapi.ui.TextComponentAccessor;
 import com.intellij.openapi.ui.TextFieldWithBrowseButton;
 import com.intellij.openapi.vfs.VirtualFile;
+import genesis.config.langage.ConfigurationMetadata;
+import genesis.config.langage.Framework;
+import genesis.config.langage.Language;
+import genesis.config.langage.Project;
+import genesis.config.langage.generator.project.ProjectGenerator;
+import lombok.Getter;
 
 import javax.swing.*;
+import java.util.List;
 
+@Getter
 public class InitialisationForm {
     private JPanel initializationPanel;
     private JTextField projectNameField;
     private TextFieldWithBrowseButton locationField; // Updated to TextFieldWithBrowseButton
-    private JComboBox<String> languageOptions;
+    private JComboBox<Language> languageOptions;
     private JComboBox<String> languageVersionOptions;
     private JComboBox<String> frameworkOptions;
-    private JComboBox<String> projectTypeOptions;
+    private JComboBox<Project> buildToolOptions;
     private JLabel nameLabel;
     private JLabel locationLabel;
     private JLabel languageLabel;
     private JLabel languageVersionLabel;
     private JLabel frameworkLabel;
-    private JLabel projectTypeLabel;
+    private JLabel buildToolLabel;
+    private JComboBox<Framework> projectTypeOptions;
+    private JLabel projectType;
 
     public InitialisationForm() {
+
         // Initialize the locationField with a folder chooser
         FileChooserDescriptor folderChooserDescriptor = FileChooserDescriptorFactory.createSingleFolderDescriptor();
         folderChooserDescriptor.setTitle("Select Folder");
@@ -38,92 +48,114 @@ public class InitialisationForm {
         };
 
         locationField.addBrowseFolderListener(folderListener);
-
-        // Populate combo boxes with options
         populateLanguageOptions();
-        populateLanguageVersionOptions();
-        populateFrameworkOptions();
-        populateProjectTypeOptions();
+
+        languageOptions.addActionListener(e -> {
+            Language selectedLanguage = (Language) languageOptions.getSelectedItem();
+            if (selectedLanguage != null) {
+                populateLanguageVersionOptions(selectedLanguage);
+                populateFrameworkOptions(selectedLanguage);
+            }
+        });
+
+        frameworkOptions.addActionListener(e -> {
+            String selectedBaseFramework = (String) frameworkOptions.getSelectedItem();
+            if (selectedBaseFramework != null) {
+                populateBuildToolOptions(selectedBaseFramework);
+                populateProjectTypeOptions(selectedBaseFramework);
+            }
+        });
     }
 
 
     private void populateLanguageOptions() {
-        String[] languages = {"Java", "C#"};
-        for (String language : languages) {
+        List<Language> languages = ProjectGenerator.languages.values()
+                .stream()
+                .toList();
+
+        for (Language language : languages) {
             languageOptions.addItem(language);
         }
-    }
 
-    private void populateLanguageVersionOptions() {
-        String[] versions = {"17", "21", "23"};
-        for (String version : versions) {
-            languageVersionOptions.addItem(version);
+        // Set the first item as selected by default
+        if (languageVersionOptions.getItemCount() > 0) {
+            languageVersionOptions.setSelectedIndex(0);
         }
     }
 
-    private void populateFrameworkOptions() {
-        String[] frameworks = {"Spring", ".NET"};
-        for (String framework : frameworks) {
+    private void populateFrameworkOptions(Language language) {
+        frameworkOptions.removeAllItems();
+        List<String> listBaseFramework = ProjectGenerator.frameworks.values().stream()
+                .filter(framework -> framework.getLanguageId() == language.getId())
+                .map(Framework::getBaseFramework)
+                .distinct()
+                .toList();
+
+        for (String framework : listBaseFramework) {
             frameworkOptions.addItem(framework);
         }
-    }
-
-    private void populateProjectTypeOptions() {
-        String[] projectTypes = {"Web API", "Application", "Microservice"};
-        for (String projectType : projectTypes) {
-            projectTypeOptions.addItem(projectType);
+        // Set the first item as selected by default
+        if (frameworkOptions.getItemCount() > 0) {
+            frameworkOptions.setSelectedIndex(0);
         }
     }
 
-    public JPanel getInitializationPanel() {
-        return initializationPanel;
+
+    private void populateProjectTypeOptions(String baseFramework) {
+        projectTypeOptions.removeAllItems();
+        List<Framework> listFramework = ProjectGenerator.frameworks.values().stream()
+                .filter(framework -> framework.getBaseFramework().equalsIgnoreCase(baseFramework))
+                .distinct()
+                .toList();
+
+        for (Framework framework : listFramework) {
+            projectTypeOptions.addItem(framework);
+        }
+
+        // Set the first item as selected by default
+        if (projectTypeOptions.getItemCount() > 0) {
+            projectTypeOptions.setSelectedIndex(0);
+        }
     }
 
-    public JTextField getProjectNameField() {
-        return projectNameField;
+    private void populateBuildToolOptions(String framework) {
+        buildToolOptions.removeAllItems();
+        for (Project project : ProjectGenerator.projects.values()) {
+            if (project.getBaseFrameworks().contains(framework)) {
+                buildToolOptions.addItem(project);
+            }
+        }
+        // Set the first item as selected by default
+        if (buildToolOptions.getItemCount() > 0) {
+            buildToolOptions.setSelectedIndex(0);
+        }
     }
 
-    public TextFieldWithBrowseButton getLocationField() {
-        return locationField;
-    }
+    private void populateLanguageVersionOptions(Language language) {
+        languageVersionOptions.removeAllItems();
+        for (ConfigurationMetadata config : language.getConfigurations()) {
+            if ("languageVersion".equals(config.getVariableName())) {
+                for (String version : config.getOptions()) {
+                    languageVersionOptions.addItem(version);
+                }
+                break;
+            }
+        }
 
-    public JComboBox<String> getLanguageOptions() {
-        return languageOptions;
-    }
+        // Vérifier si des éléments ont été ajoutés
+        boolean hasItems = languageVersionOptions.getItemCount() > 0;
 
-    public JComboBox<String> getLanguageVersionOptions() {
-        return languageVersionOptions;
-    }
-
-    public JComboBox<String> getFrameworkOptions() {
-        return frameworkOptions;
-    }
-
-    public JComboBox<String> getProjectTypeOptions() {
-        return projectTypeOptions;
-    }
-
-    public JLabel getNameLabel() {
-        return nameLabel;
-    }
-
-    public JLabel getLocationLabel() {
-        return locationLabel;
-    }
-
-    public JLabel getLanguageLabel() {
-        return languageLabel;
-    }
-
-    public JLabel getLanguageVersionLabel() {
-        return languageVersionLabel;
-    }
-
-    public JLabel getFrameworkLabel() {
-        return frameworkLabel;
-    }
-
-    public JLabel getProjectTypeLabel() {
-        return projectTypeLabel;
+        if (hasItems) {
+            // Activer les composants et sélectionner le premier élément
+            languageVersionLabel.setEnabled(true);
+            languageVersionOptions.setEnabled(true);
+            languageVersionOptions.setSelectedIndex(0);
+        } else {
+            // Désactiver les composants et afficher "Not applicable"
+            languageVersionLabel.setEnabled(false);
+            languageVersionOptions.setEnabled(false);
+            languageVersionOptions.addItem("Not applicable");
+            languageVersionOptions.setSelectedIndex(0);
+        }
     }
 }

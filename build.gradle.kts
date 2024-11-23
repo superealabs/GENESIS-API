@@ -10,6 +10,10 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven("https://www.jetbrains.com/intellij-repository/releases")
+    // Ajout du référentiel local
+    flatDir {
+        dirs("lib")
+    }
 }
 
 intellij {
@@ -20,7 +24,12 @@ intellij {
 
 dependencies {
     implementation("org.jetbrains:annotations:24.0.1")
-    // autres dépendances
+    compileOnly("org.projectlombok:lombok:1.18.36")
+    annotationProcessor("org.projectlombok:lombok:1.18.36")
+    testCompileOnly("org.projectlombok:lombok:1.18.36")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.36")
+    // Inclusion de tous les JARs du dossier lib
+    implementation(fileTree(mapOf("dir" to "lib", "include" to listOf("*.jar"))))
 }
 
 tasks {
@@ -28,6 +37,7 @@ tasks {
     withType<JavaCompile> {
         sourceCompatibility = "17"
         targetCompatibility = "17"
+        options.compilerArgs.add("-parameters")
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions.jvmTarget = "17"
