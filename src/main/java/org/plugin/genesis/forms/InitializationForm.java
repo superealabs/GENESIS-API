@@ -1,4 +1,5 @@
-package org.plugin.genesis.module.form;
+
+package org.plugin.genesis.forms;
 
 import com.intellij.openapi.fileChooser.FileChooserDescriptor;
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
@@ -16,26 +17,25 @@ import javax.swing.*;
 import java.util.List;
 
 @Getter
-public class InitialisationForm {
+public class InitializationForm {
     private JPanel initializationPanel;
     private JTextField projectNameField;
-    private TextFieldWithBrowseButton locationField; // Updated to TextFieldWithBrowseButton
+    private TextFieldWithBrowseButton locationField;
     private JComboBox<Language> languageOptions;
     private JComboBox<String> languageVersionOptions;
     private JComboBox<String> frameworkOptions;
     private JComboBox<Project> buildToolOptions;
+    private JLabel languageVersionLabel;
+    private JComboBox<Framework> projectTypeOptions;
     private JLabel nameLabel;
     private JLabel locationLabel;
     private JLabel languageLabel;
-    private JLabel languageVersionLabel;
     private JLabel frameworkLabel;
     private JLabel buildToolLabel;
-    private JComboBox<Framework> projectTypeOptions;
     private JLabel projectType;
 
-    public InitialisationForm() {
-
-        // Initialize the locationField with a folder chooser
+    public InitializationForm() {
+        // Initialize the location field with a folder chooser
         FileChooserDescriptor folderChooserDescriptor = FileChooserDescriptorFactory.createSingleFolderDescriptor();
         folderChooserDescriptor.setTitle("Select Folder");
         folderChooserDescriptor.setDescription("Choose a directory for the project location");
@@ -48,8 +48,16 @@ public class InitialisationForm {
         };
 
         locationField.addBrowseFolderListener(folderListener);
-        populateLanguageOptions();
 
+        // Populate initial options and set default selections
+        populateLanguageOptions();
+        initializeDefaultSelections();
+
+        // Add listeners for dependent comboboxes
+        addListeners();
+    }
+
+    private void addListeners() {
         languageOptions.addActionListener(e -> {
             Language selectedLanguage = (Language) languageOptions.getSelectedItem();
             if (selectedLanguage != null) {
@@ -59,60 +67,69 @@ public class InitialisationForm {
         });
 
         frameworkOptions.addActionListener(e -> {
-            String selectedBaseFramework = (String) frameworkOptions.getSelectedItem();
-            if (selectedBaseFramework != null) {
-                populateBuildToolOptions(selectedBaseFramework);
-                populateProjectTypeOptions(selectedBaseFramework);
+            String selectedFramework = (String) frameworkOptions.getSelectedItem();
+            if (selectedFramework != null) {
+                populateBuildToolOptions(selectedFramework);
+                populateProjectTypeOptions(selectedFramework);
             }
         });
     }
 
-
-    private void populateLanguageOptions() {
-        List<Language> languages = ProjectGenerator.languages.values()
-                .stream()
-                .toList();
-
-        for (Language language : languages) {
-            languageOptions.addItem(language);
+    private void initializeDefaultSelections() {
+        if (languageOptions.getItemCount() > 0) {
+            languageOptions.setSelectedIndex(0);
+            Language defaultLanguage = (Language) languageOptions.getSelectedItem();
+            if (defaultLanguage != null) {
+                populateLanguageVersionOptions(defaultLanguage);
+                populateFrameworkOptions(defaultLanguage);
+            }
         }
 
-        // Set the first item as selected by default
-        if (languageVersionOptions.getItemCount() > 0) {
-            languageVersionOptions.setSelectedIndex(0);
+        if (frameworkOptions.getItemCount() > 0) {
+            frameworkOptions.setSelectedIndex(0);
+            String defaultFramework = (String) frameworkOptions.getSelectedItem();
+            if (defaultFramework != null) {
+                populateBuildToolOptions(defaultFramework);
+                populateProjectTypeOptions(defaultFramework);
+            }
+        }
+    }
+
+    private void populateLanguageOptions() {
+        List<Language> languages = ProjectGenerator.languages.values().stream().toList();
+        for (Language language : languages) {
+            languageOptions.addItem(language);
         }
     }
 
     private void populateFrameworkOptions(Language language) {
         frameworkOptions.removeAllItems();
-        List<String> listBaseFramework = ProjectGenerator.frameworks.values().stream()
-                .filter(framework -> framework.getLanguageId() == language.getId())
+        List<String> frameworks = ProjectGenerator.frameworks.values().stream()
+                .filter(f -> f.getLanguageId() == language.getId())
                 .map(Framework::getBaseFramework)
                 .distinct()
                 .toList();
 
-        for (String framework : listBaseFramework) {
+        for (String framework : frameworks) {
             frameworkOptions.addItem(framework);
         }
-        // Set the first item as selected by default
+
         if (frameworkOptions.getItemCount() > 0) {
             frameworkOptions.setSelectedIndex(0);
         }
     }
 
-
     private void populateProjectTypeOptions(String baseFramework) {
         projectTypeOptions.removeAllItems();
-        List<Framework> listFramework = ProjectGenerator.frameworks.values().stream()
-                .filter(framework -> framework.getBaseFramework().equalsIgnoreCase(baseFramework))
+        List<Framework> frameworks = ProjectGenerator.frameworks.values().stream()
+                .filter(f -> f.getBaseFramework().equalsIgnoreCase(baseFramework))
                 .distinct()
                 .toList();
 
-        for (Framework framework : listFramework) {
+        for (Framework framework : frameworks) {
             projectTypeOptions.addItem(framework);
         }
 
-        // Set the first item as selected by default
         if (projectTypeOptions.getItemCount() > 0) {
             projectTypeOptions.setSelectedIndex(0);
         }
@@ -125,7 +142,7 @@ public class InitialisationForm {
                 buildToolOptions.addItem(project);
             }
         }
-        // Set the first item as selected by default
+
         if (buildToolOptions.getItemCount() > 0) {
             buildToolOptions.setSelectedIndex(0);
         }
@@ -142,16 +159,13 @@ public class InitialisationForm {
             }
         }
 
-        // Vérifier si des éléments ont été ajoutés
         boolean hasItems = languageVersionOptions.getItemCount() > 0;
 
         if (hasItems) {
-            // Activer les composants et sélectionner le premier élément
             languageVersionLabel.setEnabled(true);
             languageVersionOptions.setEnabled(true);
             languageVersionOptions.setSelectedIndex(0);
         } else {
-            // Désactiver les composants et afficher "Not applicable"
             languageVersionLabel.setEnabled(false);
             languageVersionOptions.setEnabled(false);
             languageVersionOptions.addItem("Not applicable");

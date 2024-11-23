@@ -1,4 +1,4 @@
-package org.plugin.genesis.module.wizards;
+package org.plugin.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 

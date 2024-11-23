@@ -8,7 +8,7 @@ import com.intellij.openapi.module.ModuleType;
 import com.intellij.openapi.roots.ModifiableRootModel;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.plugin.genesis.module.wizards.InitializationWizardStep;
+import org.plugin.genesis.wizards.InitializationWizardStep;
 
 public class GenesisApiModuleBuilder extends ModuleBuilder {
     private final static GenesisApiModuleType moduleType = new GenesisApiModuleType();

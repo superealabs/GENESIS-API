@@ -1,18 +1,19 @@
-package org.plugin.genesis.module.wizards;
+
+package org.plugin.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.openapi.options.ConfigurationException;
 import genesis.config.langage.Framework;
 import genesis.config.langage.Language;
 import genesis.config.langage.Project;
-import org.plugin.genesis.module.form.InitialisationForm;
+import org.plugin.genesis.forms.InitializationForm;
 
 import javax.swing.*;
 public class InitializationWizardStep extends ModuleWizardStep {
-    private final InitialisationForm newProjectPanel;
+    private final InitializationForm newProjectPanel;
 
     public InitializationWizardStep() {
-        newProjectPanel = new InitialisationForm();
+        newProjectPanel = new InitializationForm();
     }
 
     @Override
@@ -91,4 +92,3 @@ public class InitializationWizardStep extends ModuleWizardStep {
 
 
 }
-
