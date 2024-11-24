@@ -3,8 +3,6 @@ package org.plugin.genesis.wizards.conditionals;
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import genesis.config.langage.Framework;
 import handler.ProjectGenerationContext;
-import org.plugin.genesis.wizards.GenerationOptionWizardStep;
-import org.plugin.genesis.wizards.SpecificConfigurationWizardStep;
 
 import javax.swing.*;
 

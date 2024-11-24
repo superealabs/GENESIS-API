@@ -1,28 +1,29 @@
 package org.plugin.genesis.module;
 
 import com.intellij.ide.util.projectWizard.ModuleBuilder;
-import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.ide.util.projectWizard.WizardContext;
-import com.intellij.openapi.Disposable;
 import com.intellij.openapi.module.ModuleType;
 import com.intellij.openapi.roots.ModifiableRootModel;
+import com.intellij.openapi.vfs.LocalFileSystem;
+import com.intellij.openapi.vfs.VirtualFile;
 import handler.ProjectGenerationContext;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import org.plugin.genesis.wizards.InitializationWizardStep;
 
 public class GenesisApiModuleBuilder extends ModuleBuilder {
     private final static GenesisApiModuleType moduleType = new GenesisApiModuleType();
     public static ProjectGenerationContext projectGenerationContext = new ProjectGenerationContext();
+    public WizardContext wizardContext;
 
     @Override
     public void setupRootModel(@NotNull ModifiableRootModel modifiableRootModel) {
-    }
-
-    @Nullable
-    @Override
-    public ModuleWizardStep getCustomOptionsStep(WizardContext context, Disposable parentDisposable) {
-        return new InitializationWizardStep(projectGenerationContext);
+        if (wizardContext != null) {
+            String projectPath = wizardContext.getProjectFileDirectory();
+            VirtualFile projectRoot = LocalFileSystem.getInstance()
+                    .refreshAndFindFileByPath(projectPath);
+            if (projectRoot != null) {
+                modifiableRootModel.addContentEntry(projectRoot);
+            }
+        }
     }
 
     @Override

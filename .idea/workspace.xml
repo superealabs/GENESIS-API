@@ -5,31 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/GenerationOptionWizardStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/FinalModuleWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/SpecificConfigurationWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/GenerationOptionWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/GenerationOptionWizardStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/Framework.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/Framework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/framework/APIGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/framework/APIGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/framework/FrameworkMetadataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/framework/FrameworkMetadataProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/handler/ProjectGeneratorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/handler/ProjectGeneratorHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/json/databases.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/json/databases.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/yaml/frameworks.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/yaml/frameworks.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/InitConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/InitConditionalWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/java/com/labs/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/java/com/labs/apigateway/ApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/java/com/labs/apigateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/java/com/labs/apigateway/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/test/java/com/labs/apigateway/ApiGatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/test/java/com/labs/apigateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/TestEurekaServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/TestEurekaServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/TestEurekaServer/src/main/java/com/labs/testeurekaserver/TestEurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/TestEurekaServer/src/main/java/com/labs/testeurekaserver/TestEurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/TestEurekaServer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/TestEurekaServer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/TestEurekaServer/src/test/java/com/labs/testeurekaserver/TestEurekaServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/TestEurekaServer/src/test/java/com/labs/testeurekaserver/TestEurekaServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiNet/WebApiNet/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiNet/WebApiNet/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiNet/WebApiNet/obj/Debug/net8.0/WebApiNet.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiNet/WebApiNet/obj/Debug/net8.0/WebApiNet.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiNet/WebApiNet/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiNet/WebApiNet/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/WebApiSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/WebApiSpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/DepartementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/DepartementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/EmployeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/EmployeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/ExampleTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/ExampleTableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/HouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/TestingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/controllers/TestingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/Departement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/Employe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/ExampleTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/ExampleTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/models/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/DepartementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/DepartementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/EmployeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/EmployeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/ExampleTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/ExampleTableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/HomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/HomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/HouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/HouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/TestingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/main/java/com/labs/webapispring/services/TestingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/test/java/com/labs/webapispring/WebApiSpringApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/WebApiSpring/src/test/java/com/labs/webapispring/WebApiSpringApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/generated_script_2024-11-20T06:18:33.469915.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/generated_script_2024-11-20T06:18:33.469915.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/framework/GenesisGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/framework/GenesisGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/project/GroqApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/project/GroqApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/project/ProjectGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/project/ProjectGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/SQLRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/SQLRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/adapter/DatabaseDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/adapter/DatabaseDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/model/TableMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/model/TableMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/engine/GenesisTemplateEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/engine/GenesisTemplateEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/json/languages.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/json/languages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/test/java/connexionBaseOracle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/test/java/connexionBaseOracle/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/test/java/project/ProjectGeneratorCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/test/java/project/ProjectGeneratorCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/test/java/templateEngine/GenesisTemplateEngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/test/java/templateEngine/GenesisTemplateEngineTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/test/java/templateEngine/TemplateModelRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/test/java/templateEngine/TemplateModelRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/test/java/templateEngine/VelocityTemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/test/java/templateEngine/VelocityTemplateTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +195,7 @@
     "Gradle.GENESIS-Plugin [init].executor": "Run",
     "Gradle.GENESIS-Plugin [setupDependencies].executor": "Run",
     "Gradle.Run Plugin.executor": "Run",
-    "Gradle.Run.executor": "Debug",
+    "Gradle.Run.executor": "Run",
     "Gradle.Upgrade Gradle wrapper.executor": "Run",
     "Gradle.demo [buildPlugin].executor": "Run",
     "Gradle.demo [setupDependencies].executor": "Run",
@@ -381,7 +415,7 @@
       <workItem from="1732202202184" duration="2869000" />
       <workItem from="1732429023381" duration="8086000" />
       <workItem from="1732443948562" duration="1329000" />
-      <workItem from="1732451102804" duration="4929000" />
+      <workItem from="1732451102804" duration="12762000" />
     </task>
     <servers />
   </component>
@@ -398,13 +432,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java</url>
-          <line>41</line>
+          <line>44</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

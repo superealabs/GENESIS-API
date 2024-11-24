@@ -1,6 +1,7 @@
 package org.plugin.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
+import com.intellij.ide.util.projectWizard.WizardContext;
 import com.intellij.openapi.options.ConfigurationException;
 import genesis.config.langage.Framework;
 import genesis.config.langage.Language;
@@ -15,6 +16,7 @@ public class InitializationWizardStep extends ModuleWizardStep {
     private final InitializationForm newProjectPanel;
     private final ProjectGenerationContext projectGenerationContext;
 
+
     public InitializationWizardStep(ProjectGenerationContext projectGenerationContext) {
         newProjectPanel = new InitializationForm();
         this.projectGenerationContext = projectGenerationContext;
@@ -27,6 +29,7 @@ public class InitializationWizardStep extends ModuleWizardStep {
 
     @Override
     public void updateDataModel() {
+
         // Récupérer les valeurs depuis le formulaire
         String projectName = newProjectPanel.getProjectNameField().getText().trim();
         String location = newProjectPanel.getLocationField().getText().trim();
@@ -45,6 +48,7 @@ public class InitializationWizardStep extends ModuleWizardStep {
                 .setLanguage(language)
                 .setFramework(framework)
                 .setProject(buildTool);
+
     }
 
     @Override

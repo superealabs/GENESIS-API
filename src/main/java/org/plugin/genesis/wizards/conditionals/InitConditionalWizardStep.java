@@ -22,6 +22,7 @@ public class InitConditionalWizardStep extends ModuleWizardStep {
 
     @Override
     public JComponent getComponent() {
+        System.out.println("Actual component: " + actualStep.getClass().getName() + ", isVisible : " + isStepVisible()+"\n\n");
         if (isStepVisible()) {
             return actualStep.getComponent();
         } else {
@@ -39,7 +40,9 @@ public class InitConditionalWizardStep extends ModuleWizardStep {
     @Override
     public boolean isStepVisible() {
         Framework framework = context.getFramework();
-        return framework != null && framework.getUseDB();
+        boolean isVisible = framework != null && framework.getUseDB();
+        System.out.println("\n\nThe step : "+actualStep.getClass().getName() + ", isVisible : " + isVisible);
+        return isVisible;
     }
 
 }

@@ -6,7 +6,7 @@ import org.plugin.genesis.forms.GenerationOptionForm;
 
 import javax.swing.*;
 
-public class GenerationOptionWizardStep extends ModuleWizardStep  {
+public class GenerationOptionWizardStep extends ModuleWizardStep {
     private final GenerationOptionForm generationOptionForm;
     private ProjectGenerationContext projectGenerationContext;
 
