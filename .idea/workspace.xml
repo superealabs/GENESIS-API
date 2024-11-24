@@ -6,12 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/GenerationOptionWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/GenerationOptionWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/InitConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/InitConditionalWizardStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/pom.xml" afterDir="false" />
@@ -53,10 +54,12 @@
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/framework/GenesisGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/framework/GenesisGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/project/GroqApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/project/GroqApiClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/project/ProjectGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/config/langage/generator/project/ProjectGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/SQLRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/SQLRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/adapter/DatabaseDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/adapter/DatabaseDeserializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/model/TableMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/connexion/model/TableMetadata.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/engine/GenesisTemplateEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/genesis/engine/GenesisTemplateEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/handler/ProjectGeneratorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/handler/ProjectGeneratorHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/utils/FileUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/json/languages.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/json/languages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/test/java/connexionBaseOracle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/test/java/connexionBaseOracle/Main.java" afterDir="false" />
@@ -161,7 +164,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../GENESIS" />
   </component>
   <component name="KotlinScriptingSettings">
     <option name="suppressDefinitionsCheck" value="true" />
@@ -209,7 +212,7 @@
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "137",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "261",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "microservices",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/nomena/STAGE/GENESIS-Plugin/libs",
     "node.js.detected.package.eslint": "true",
@@ -227,8 +230,8 @@
     "DatabaseDriversLRU": [
       "redshift",
       "mysql_aurora",
-      "mysql",
-      "postgresql"
+      "postgresql",
+      "mysql"
     ]
   }
 }]]></component>
@@ -415,7 +418,8 @@
       <workItem from="1732202202184" duration="2869000" />
       <workItem from="1732429023381" duration="8086000" />
       <workItem from="1732443948562" duration="1329000" />
-      <workItem from="1732451102804" duration="12762000" />
+      <workItem from="1732451102804" duration="20901000" />
+      <workItem from="1732479965207" duration="1984000" />
     </task>
     <servers />
   </component>
@@ -432,7 +436,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java</url>
-          <line>44</line>
+          <line>43</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

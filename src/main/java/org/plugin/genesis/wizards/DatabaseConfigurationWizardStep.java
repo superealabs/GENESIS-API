@@ -2,6 +2,8 @@ package org.plugin.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.openapi.options.ConfigurationException;
+import genesis.connexion.Credentials;
+import genesis.connexion.Database;
 import handler.ProjectGenerationContext;
 import org.plugin.genesis.forms.DatabaseConfigurationForm;
 
@@ -23,11 +25,100 @@ public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
 
     @Override
     public void updateDataModel() {
+        // Retrieve selected database
+        Database selectedDatabase = (Database) databaseConfigurationForm.getDmsOptions().getSelectedItem();
 
+        if (selectedDatabase != null) {
+            // Update database in the context
+            projectGenerationContext.setDatabase(selectedDatabase);
+
+            // Create credentials from the form inputs
+            Credentials credentials = selectedDatabase.getCredentials();
+
+            // Update credentials in the context
+            projectGenerationContext.setCredentials(credentials);
+
+            // Optionally test the connection (optional logic can be added here)
+            try {
+                projectGenerationContext.setConnection(selectedDatabase.getConnection(credentials));
+            } catch (Exception e) {
+                // Log connection error (optional)
+                throw new RuntimeException("Connection test failed: " + e.getMessage());
+            }
+        }
     }
 
     @Override
     public boolean validate() throws ConfigurationException {
+        // Validate required fields
+        validateRequiredFields();
+
+        // Validate port number
+        validatePort();
+
+        // Validate database-specific fields
+        validateDatabaseSpecificFields();
+
+        // Ensure connection is tested successfully
+        validateConnectionTest();
+
         return true;
     }
+
+    private void validateRequiredFields() throws ConfigurationException {
+        String host = databaseConfigurationForm.getHostField().getText().trim();
+        String portStr = databaseConfigurationForm.getPortField().getText().trim();
+        String databaseName = databaseConfigurationForm.getDatabaseField().getText().trim();
+        String username = databaseConfigurationForm.getUsernameField().getText().trim();
+
+        if (host.isEmpty()) {
+            throw new ConfigurationException("Host field cannot be empty.");
+        }
+        if (portStr.isEmpty()) {
+            throw new ConfigurationException("Port field cannot be empty.");
+        }
+        if (databaseName.isEmpty()) {
+            throw new ConfigurationException("Database name cannot be empty.");
+        }
+        if (username.isEmpty()) {
+            throw new ConfigurationException("Username field cannot be empty.");
+        }
+    }
+
+    private void validatePort() throws ConfigurationException {
+        String portStr = databaseConfigurationForm.getPortField().getText().trim();
+
+        try {
+            int port = Integer.parseInt(portStr);
+            if (port <= 0 || port > 65535) {
+                throw new ConfigurationException("Port must be between 1 and 65535.");
+            }
+        } catch (NumberFormatException e) {
+            throw new ConfigurationException("Port must be a valid integer.");
+        }
+    }
+
+    private void validateDatabaseSpecificFields() throws ConfigurationException {
+        Database selectedDatabase = (Database) databaseConfigurationForm.getDmsOptions().getSelectedItem();
+
+        if (selectedDatabase != null && "Oracle".equalsIgnoreCase(selectedDatabase.getName())) {
+            String sid = databaseConfigurationForm.getSidField().getText().trim();
+            String driverType = databaseConfigurationForm.getDriverNameField().getText().trim();
+
+            if (sid.isEmpty()) {
+                throw new ConfigurationException("SID field cannot be empty for Oracle databases.");
+            }
+            if (driverType.isEmpty()) {
+                throw new ConfigurationException("Driver Type field cannot be empty for Oracle databases.");
+            }
+        }
+    }
+
+    private void validateConnectionTest() throws ConfigurationException {
+        if (!databaseConfigurationForm.isConnectionSuccessful()) {
+            throw new ConfigurationException("Please test the connection and ensure it is successful before proceeding.");
+        }
+    }
+
+
 }

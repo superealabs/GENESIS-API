@@ -5,10 +5,16 @@
 
 package org.plugin.genesis.forms;
 
+import com.intellij.ui.JBColor;
+import genesis.config.langage.generator.project.ProjectGenerator;
+import genesis.connexion.Credentials;
 import genesis.connexion.Database;
 import lombok.Getter;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import java.awt.event.ActionListener;
 
 @Getter
 public class DatabaseConfigurationForm {
@@ -30,10 +36,229 @@ public class DatabaseConfigurationForm {
     private JLabel schemaLabel;
     private JCheckBox useSSLCheckBox;
     private JCheckBox allowKeyRetrievalCheckBox;
-    private JLabel driverTypeLabel;
-    private JTextField driverTypeField;
+    private JLabel driverNameLabel;
+    private JTextField driverNameField;
     private JLabel URLLabel;
-    private JTextField textField1;
+    private JTextField URLField;
     private JTextField sidField;
-    private JLabel SIDLabel;
+    private JLabel sidLabel;
+
+    private JButton testConnectionButton;
+    private JLabel connectionStatusLabel;
+
+    private boolean connectionSuccessful = false;
+
+
+    public DatabaseConfigurationForm() {
+        populateDmsOptions();
+        initializeDefaultValues();
+        addListeners();
+
+        if (dmsOptions.getItemCount() > 0) {
+            dmsOptions.setSelectedIndex(0);
+        }
+
+        addTestConnectionButtonListener();
+    }
+
+    private void addTestConnectionButtonListener() {
+        testConnectionButton.addActionListener(e -> {
+            // Retrieve the selected database
+            Database selectedDatabase = (Database) dmsOptions.getSelectedItem();
+            if (selectedDatabase != null) {
+                // Build Credentials based on user input
+                Credentials credentials = new Credentials(
+                        databaseField.getText().trim(),
+                        schemaField.getText().trim(),
+                        usernameField.getText().trim(),
+                        new String(passwordField.getPassword()),
+                        hostField.getText().trim(),
+                        portField.getText().trim(),
+                        driverNameField.getText().trim(),
+                        sidField.getText().trim(),
+                        useSSLCheckBox.isSelected(),
+                        allowKeyRetrievalCheckBox.isSelected(),
+                        trustCertificateCheckBox.isSelected()
+                );
+
+                // Attempt to establish the connection
+                try {
+                    selectedDatabase.getConnection(credentials).close();
+                    JOptionPane.showMessageDialog(
+                            mainPanel,
+                            "Connection successful!",
+                            "Success",
+                            JOptionPane.INFORMATION_MESSAGE
+                    );
+                    connectionStatusLabel.setText("<html>Connection successful!</html>");
+                    connectionStatusLabel.setForeground(JBColor.GREEN);
+                    connectionSuccessful = true;
+                } catch (Exception ex) {
+                    // Format the error message as HTML
+                    String formattedMessage = formatErrorMessage(ex.getMessage());
+                    String formatErrorMessageHtml = formatErrorMessageHtml(ex.getMessage());
+
+                    // Display the formatted error message in a popup
+                    JOptionPane.showMessageDialog(
+                            mainPanel,
+                            "Connection failed:\n" + formattedMessage,
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE
+                    );
+
+                    // Update the connection status label with the formatted HTML message
+                    connectionStatusLabel.setText("<html>Connection failed:<br>" + formatErrorMessageHtml + "</html>");
+                    connectionStatusLabel.setForeground(JBColor.RED);
+                    connectionSuccessful = false;
+                }
+            }
+        });
+    }
+
+
+    private String formatErrorMessage(String message) {
+        if (message == null || message.isEmpty()) {
+            return "Unknown error.";
+        }
+        // Split the message by ". " (period followed by a space) and join with <br> for HTML
+        return String.join("\n", message.split("\\.\\s"));
+    }
+
+    private String formatErrorMessageHtml(String message) {
+        if (message == null || message.isEmpty()) {
+            return "Unknown error.";
+        }
+        // Split the message by ". " (period followed by a space) and join with <br> for HTML
+        return String.join("<br>", message.split("\\.\\s"));
+    }
+
+
+    private void populateDmsOptions() {
+        // Add available databases to the combo box
+        for (Database database : ProjectGenerator.databases.values()) {
+            assert dmsOptions != null;
+            dmsOptions.addItem(database);
+        }
+    }
+
+    private void initializeDefaultValues() {
+        Database selectedDatabase = (Database) getDmsOptions().getSelectedItem();
+
+        // Set default values for text fields
+        hostField.setText("localhost");
+        assert selectedDatabase != null;
+        portField.setText(selectedDatabase.getPort());
+        usernameField.setText("root");
+        passwordField.setText("");
+        schemaField.setText("");
+        driverNameField.setText(selectedDatabase.getDriverName());
+        sidField.setText(selectedDatabase.getSid());
+
+        // Default options for checkboxes
+        trustCertificateCheckBox.setSelected(true);
+        useSSLCheckBox.setSelected(true);
+        allowKeyRetrievalCheckBox.setSelected(true);
+
+        // Default URL
+        if (dmsOptions.getItemCount() > 0) {
+            updateJdbcUrl((Database) dmsOptions.getSelectedItem());
+        }
+    }
+
+    private void addListeners() {
+        // Listener for database selection change
+        dmsOptions.addActionListener(e -> {
+            Database selectedDatabase = (Database) dmsOptions.getSelectedItem();
+            if (selectedDatabase != null) {
+                updateFieldsForDatabase(selectedDatabase);
+            }
+        });
+
+        // Listener for checkboxes affecting the JDBC URL
+        ActionListener updateUrlActionListener = e -> updateJdbcUrl((Database) dmsOptions.getSelectedItem());
+        trustCertificateCheckBox.addActionListener(updateUrlActionListener);
+        useSSLCheckBox.addActionListener(updateUrlActionListener);
+        allowKeyRetrievalCheckBox.addActionListener(updateUrlActionListener);
+
+        // DocumentListener for text fields affecting the JDBC URL
+        DocumentListener updateUrlDocumentListener = new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                updateJdbcUrl((Database) dmsOptions.getSelectedItem());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                updateJdbcUrl((Database) dmsOptions.getSelectedItem());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                updateJdbcUrl((Database) dmsOptions.getSelectedItem());
+            }
+        };
+
+        // Add the DocumentListener to each text field
+        hostField.getDocument().addDocumentListener(updateUrlDocumentListener);
+        portField.getDocument().addDocumentListener(updateUrlDocumentListener);
+        databaseField.getDocument().addDocumentListener(updateUrlDocumentListener);
+        usernameField.getDocument().addDocumentListener(updateUrlDocumentListener);
+        schemaField.getDocument().addDocumentListener(updateUrlDocumentListener);
+        sidField.getDocument().addDocumentListener(updateUrlDocumentListener);
+        driverNameField.getDocument().addDocumentListener(updateUrlDocumentListener);
+    }
+
+
+    private void updateFieldsForDatabase(Database database) {
+        // Adjust visible fields based on the selected database
+        boolean isMySQL = "MySQL".equalsIgnoreCase(database.getName());
+        boolean isOracle = "Oracle".equalsIgnoreCase(database.getName());
+        boolean isSQLServer = "SQL Server".equalsIgnoreCase(database.getName());
+
+        // Enable/disable specific fields
+        trustCertificateCheckBox.setEnabled(isMySQL || isOracle || isSQLServer);
+        useSSLCheckBox.setEnabled(isMySQL || isOracle || isSQLServer);
+        allowKeyRetrievalCheckBox.setEnabled(isMySQL);
+
+        driverNameField.setEnabled(isOracle);
+        sidField.setEnabled(isOracle);
+
+        // Specific default values
+        portField.setText(database.getPort());
+        if (isOracle) {
+            sidField.setText(database.getSid());
+            driverNameField.setText(database.getDriver());
+        }
+
+        // Update the JDBC URL
+        updateJdbcUrl(database);
+    }
+
+    private void updateJdbcUrl(Database database) {
+        if (database == null) return;
+
+        // Build Credentials based on user input
+        Credentials credentials = new Credentials(
+                databaseField.getText().trim(),          // databaseName
+                schemaField.getText().trim(),           // schemaName
+                usernameField.getText().trim(),         // user
+                new String(passwordField.getPassword()),// pwd
+                hostField.getText().trim(),             // host
+                portField.getText().trim(),             // port
+                driverNameField.getText().trim(),       // driverType
+                sidField.getText().trim(),              // SID
+                useSSLCheckBox.isSelected(),            // useSSL
+                allowKeyRetrievalCheckBox.isSelected(), // allowPublicKeyRetrieval
+                trustCertificateCheckBox.isSelected()   // trustCertificate
+        );
+
+        database.setCredentials(credentials);
+
+        // Generate the dynamic JDBC URL using the Credentials and the selected database
+        String jdbcUrl = database.getJdbcUrl(credentials);
+
+        // Update the URL field
+        URLField.setText(jdbcUrl);
+    }
+
 }

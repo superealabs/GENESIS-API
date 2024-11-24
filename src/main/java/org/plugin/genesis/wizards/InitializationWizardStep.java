@@ -1,7 +1,6 @@
 package org.plugin.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
-import com.intellij.ide.util.projectWizard.WizardContext;
 import com.intellij.openapi.options.ConfigurationException;
 import genesis.config.langage.Framework;
 import genesis.config.langage.Language;

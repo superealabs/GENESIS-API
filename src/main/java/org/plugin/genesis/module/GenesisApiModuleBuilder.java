@@ -1,13 +1,17 @@
 package org.plugin.genesis.module;
 
 import com.intellij.ide.util.projectWizard.ModuleBuilder;
+import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.ide.util.projectWizard.WizardContext;
+import com.intellij.openapi.Disposable;
 import com.intellij.openapi.module.ModuleType;
 import com.intellij.openapi.roots.ModifiableRootModel;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 import handler.ProjectGenerationContext;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import org.plugin.genesis.wizards.InitializationWizardStep;
 
 public class GenesisApiModuleBuilder extends ModuleBuilder {
     private final static GenesisApiModuleType moduleType = new GenesisApiModuleType();
@@ -24,6 +28,12 @@ public class GenesisApiModuleBuilder extends ModuleBuilder {
                 modifiableRootModel.addContentEntry(projectRoot);
             }
         }
+    }
+
+    @Nullable
+    @Override
+    public ModuleWizardStep getCustomOptionsStep(WizardContext context, Disposable parentDisposable) {
+        return new InitializationWizardStep(projectGenerationContext);
     }
 
     @Override

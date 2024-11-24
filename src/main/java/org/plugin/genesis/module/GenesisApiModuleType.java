@@ -15,11 +15,11 @@ import org.plugin.genesis.wizards.conditionals.InitConditionalWizardStep;
 
 import javax.swing.*;
 
-import java.util.Arrays;
 
 import static org.plugin.genesis.module.GenesisApiModuleBuilder.projectGenerationContext;
+
 final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
-    private static final String ID = "DEMO_MODULE_TYPE";
+    private static final String ID = "GENESIS_API_MODULE_TYPE";
 
     GenesisApiModuleType() {
         super(ID);
@@ -53,15 +53,10 @@ final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
                                                           @NotNull GenesisApiModuleBuilder moduleBuilder,
                                                           @NotNull ModulesProvider modulesProvider) {
 
-        // Étapes personnalisées (apparaîtront après "Name and Location")
         DatabaseConfigurationWizardStep databaseConfigurationWizardStep = new DatabaseConfigurationWizardStep(projectGenerationContext);
         InitConditionalWizardStep initConditionalWizardStep = new InitConditionalWizardStep(projectGenerationContext, databaseConfigurationWizardStep);
 
-        var steps = getModuleWizardSteps(initConditionalWizardStep);
-
-        System.out.println("\nSteps: " + Arrays.toString(steps) + "\n");
-
-        return steps;
+        return getModuleWizardSteps(initConditionalWizardStep);
     }
 
     private static ModuleWizardStep @NotNull [] getModuleWizardSteps(InitConditionalWizardStep initConditionalWizardStep) {
@@ -70,7 +65,6 @@ final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
         GenConfigConditionalWizardStep genConfigConditionalWizardStep = new GenConfigConditionalWizardStep(projectGenerationContext, generationOptionWizardStep);
 
         return new ModuleWizardStep[]{
-                new InitializationWizardStep(projectGenerationContext),
                 initConditionalWizardStep,
                 genConfigConditionalWizardStep,
                 specificConfigurationWizardStep
