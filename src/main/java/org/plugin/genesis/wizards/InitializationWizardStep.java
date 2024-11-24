@@ -1,4 +1,3 @@
-
 package org.plugin.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
@@ -37,7 +36,7 @@ public class InitializationWizardStep extends ModuleWizardStep {
         Project buildTool = (Project) newProjectPanel.getBuildToolOptions().getSelectedItem();
 
         assert languageVersion != null;
-        Map<String, Object> languageConfiguration = Map.of("languageVerison", languageVersion);
+        Map<String, Object> languageConfiguration = Map.of("languageVersion", languageVersion);
         projectGenerationContext.setLanguageConfiguration(languageConfiguration);
 
         projectGenerationContext
@@ -65,9 +64,9 @@ public class InitializationWizardStep extends ModuleWizardStep {
         }
         if (!projectName.matches("^[a-zA-Z0-9_]+$")) {
             throw new ConfigurationException("""
-                                                The project name must be a single word containing only letters, numbers, and underscores.
-                                                No special characters or spaces are allowed.
-                                            """);
+                        The project name must be a single word containing only letters, numbers, and underscores.
+                        No special characters or spaces are allowed.
+                    """);
         }
 
         // Check that the location path is not empty

@@ -1,4 +1,3 @@
-
 package org.plugin.genesis.forms;
 
 import com.intellij.openapi.fileChooser.FileChooserDescriptor;
@@ -40,7 +39,7 @@ public class InitializationForm {
 
         // Ajoutez un écouteur de sélection de dossier au champ de texte
         locationField.addBrowseFolderListener(
-               null, // Projet (null si non applicable)
+                null, // Projet (null si non applicable)
                 folderChooserDescriptor
         );
 
