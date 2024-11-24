@@ -3,40 +3,42 @@
  * Copyright (c) 2024 nomena
  */
 
-package org.plugin.genesis.wizards;
+package org.plugin.genesis.wizards.conditionals;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
+import genesis.config.langage.Framework;
 import handler.ProjectGenerationContext;
 
 import javax.swing.*;
 
-public class ConditionalWizardStep extends ModuleWizardStep {
+public class InitConditionalWizardStep extends ModuleWizardStep {
     private final ProjectGenerationContext context;
     private final ModuleWizardStep actualStep;
 
-    public ConditionalWizardStep(ProjectGenerationContext context, ModuleWizardStep actualStep) {
+    public InitConditionalWizardStep(ProjectGenerationContext context, ModuleWizardStep actualStep) {
         this.context = context;
         this.actualStep = actualStep;
     }
-
     @Override
     public JComponent getComponent() {
-        if (context.getFramework().getUseDB()) {
+        if (isStepVisible()) {
             return actualStep.getComponent();
         } else {
-            return new JLabel("This step is ignored given the actual configuration.");
+            return new JLabel("Cette étape est ignorée en fonction de la configuration actuelle.");
         }
     }
 
     @Override
     public void updateDataModel() {
-        if (context.getFramework().getUseDB()) {
+        if (isStepVisible()) {
             actualStep.updateDataModel();
         }
     }
 
     @Override
     public boolean isStepVisible() {
-        return context.getFramework().getUseDB();
+        Framework framework = context.getFramework();
+        return framework != null && framework.getUseDB();
     }
+
 }

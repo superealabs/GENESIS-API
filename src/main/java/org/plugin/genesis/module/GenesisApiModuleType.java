@@ -7,7 +7,7 @@ import com.intellij.openapi.roots.ui.configuration.ModulesProvider;
 import handler.ProjectGenerationContext;
 import org.jetbrains.annotations.NotNull;
 import org.plugin.genesis.icon.SdkIcons;
-import org.plugin.genesis.wizards.ConditionalWizardStep;
+import org.plugin.genesis.wizards.conditionals.InitConditionalWizardStep;
 import org.plugin.genesis.wizards.DatabaseConfigurationWizardStep;
 import org.plugin.genesis.wizards.FinalModuleWizardStep;
 import org.plugin.genesis.wizards.InitializationWizardStep;
@@ -53,9 +53,8 @@ final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
 
         InitializationWizardStep initializationStep = new InitializationWizardStep(projectGenerationContext);
         DatabaseConfigurationWizardStep dbConfigStep = new DatabaseConfigurationWizardStep(projectGenerationContext);
-        ConditionalWizardStep conditionalDbStep = new ConditionalWizardStep(projectGenerationContext, dbConfigStep);
 
-
+        InitConditionalWizardStep conditionalDbStep = new InitConditionalWizardStep(projectGenerationContext, dbConfigStep);
         FinalModuleWizardStep finalStep = new FinalModuleWizardStep(projectGenerationContext);
 
         return new ModuleWizardStep[]{initializationStep, conditionalDbStep, finalStep};
