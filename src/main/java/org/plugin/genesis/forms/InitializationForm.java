@@ -15,7 +15,7 @@ import java.util.List;
 
 @Getter
 public class InitializationForm {
-    private JPanel initializationPanel;
+    private JPanel mainPanel;
     private JTextField projectNameField;
     private TextFieldWithBrowseButton locationField;
     private JComboBox<Language> languageOptions;

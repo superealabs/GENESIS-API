@@ -19,12 +19,13 @@ public class InitConditionalWizardStep extends ModuleWizardStep {
         this.context = context;
         this.actualStep = actualStep;
     }
+
     @Override
     public JComponent getComponent() {
         if (isStepVisible()) {
             return actualStep.getComponent();
         } else {
-            return new JLabel("Cette étape est ignorée en fonction de la configuration actuelle.");
+            return new JLabel("This step is not visible");
         }
     }
 

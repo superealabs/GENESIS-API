@@ -4,15 +4,17 @@ import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.ide.util.projectWizard.WizardContext;
 import com.intellij.openapi.module.ModuleType;
 import com.intellij.openapi.roots.ui.configuration.ModulesProvider;
-import handler.ProjectGenerationContext;
 import org.jetbrains.annotations.NotNull;
 import org.plugin.genesis.icon.SdkIcons;
+import org.plugin.genesis.wizards.GenerationOptionWizardStep;
+import org.plugin.genesis.wizards.conditionals.GenConfigConditionalWizardStep;
 import org.plugin.genesis.wizards.conditionals.InitConditionalWizardStep;
 import org.plugin.genesis.wizards.DatabaseConfigurationWizardStep;
-import org.plugin.genesis.wizards.FinalModuleWizardStep;
-import org.plugin.genesis.wizards.InitializationWizardStep;
+import org.plugin.genesis.wizards.SpecificConfigurationWizardStep;
 
 import javax.swing.*;
+
+import static org.plugin.genesis.module.GenesisApiModuleBuilder.projectGenerationContext;
 
 final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
     private static final String ID = "DEMO_MODULE_TYPE";
@@ -49,15 +51,14 @@ final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
                                                           @NotNull GenesisApiModuleBuilder moduleBuilder,
                                                           @NotNull ModulesProvider modulesProvider) {
 
-        ProjectGenerationContext projectGenerationContext = new ProjectGenerationContext();
+        DatabaseConfigurationWizardStep databaseConfigurationWizardStep = new DatabaseConfigurationWizardStep(projectGenerationContext);
+        InitConditionalWizardStep initConditionalWizardStep = new InitConditionalWizardStep(projectGenerationContext, databaseConfigurationWizardStep);
 
-        InitializationWizardStep initializationStep = new InitializationWizardStep(projectGenerationContext);
-        DatabaseConfigurationWizardStep dbConfigStep = new DatabaseConfigurationWizardStep(projectGenerationContext);
+        GenerationOptionWizardStep generationOptionWizardStep = new GenerationOptionWizardStep(projectGenerationContext);
+        SpecificConfigurationWizardStep specificConfigurationWizardStep = new SpecificConfigurationWizardStep(projectGenerationContext);
+        GenConfigConditionalWizardStep genConfigConditionalWizardStep = new GenConfigConditionalWizardStep(projectGenerationContext, generationOptionWizardStep);
 
-        InitConditionalWizardStep conditionalDbStep = new InitConditionalWizardStep(projectGenerationContext, dbConfigStep);
-        FinalModuleWizardStep finalStep = new FinalModuleWizardStep(projectGenerationContext);
-
-        return new ModuleWizardStep[]{initializationStep, conditionalDbStep, finalStep};
+        return new ModuleWizardStep[]{databaseConfigurationWizardStep, initConditionalWizardStep, genConfigConditionalWizardStep, specificConfigurationWizardStep};
     }
 
 }

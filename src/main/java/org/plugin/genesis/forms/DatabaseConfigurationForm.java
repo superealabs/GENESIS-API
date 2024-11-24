@@ -5,15 +5,16 @@
 
 package org.plugin.genesis.forms;
 
+import genesis.connexion.Database;
 import lombok.Getter;
 
 import javax.swing.*;
 
 @Getter
 public class DatabaseConfigurationForm {
-    private JPanel databaseConfigurationPanel;
+    private JPanel mainPanel;
     private JLabel dmsLabel;
-    private JComboBox dmsOptions;
+    private JComboBox<Database> dmsOptions;
     private JLabel databaseLabel;
     private JTextField databaseField;
     private JLabel hostLabel;
@@ -33,4 +34,6 @@ public class DatabaseConfigurationForm {
     private JTextField driverTypeField;
     private JLabel URLLabel;
     private JTextField textField1;
+    private JTextField sidField;
+    private JLabel SIDLabel;
 }

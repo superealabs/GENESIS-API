@@ -22,7 +22,7 @@ public class InitializationWizardStep extends ModuleWizardStep {
 
     @Override
     public JComponent getComponent() {
-        return newProjectPanel.getInitializationPanel();
+        return newProjectPanel.getMainPanel();
     }
 
     @Override

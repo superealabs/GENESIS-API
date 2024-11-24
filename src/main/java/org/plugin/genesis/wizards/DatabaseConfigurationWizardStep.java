@@ -18,7 +18,7 @@ public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
 
     @Override
     public JComponent getComponent() {
-        return databaseConfigurationForm.getDatabaseConfigurationPanel();
+        return databaseConfigurationForm.getMainPanel();
     }
 
     @Override
