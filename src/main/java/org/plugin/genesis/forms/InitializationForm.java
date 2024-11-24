@@ -3,9 +3,7 @@ package org.plugin.genesis.forms;
 
 import com.intellij.openapi.fileChooser.FileChooserDescriptor;
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
-import com.intellij.openapi.ui.TextBrowseFolderListener;
 import com.intellij.openapi.ui.TextFieldWithBrowseButton;
-import com.intellij.openapi.vfs.VirtualFile;
 import genesis.config.langage.ConfigurationMetadata;
 import genesis.config.langage.Framework;
 import genesis.config.langage.Language;
@@ -23,10 +21,10 @@ public class InitializationForm {
     private TextFieldWithBrowseButton locationField;
     private JComboBox<Language> languageOptions;
     private JComboBox<String> languageVersionOptions;
-    private JComboBox<String> frameworkOptions;
+    private JComboBox<String> coreFrameworkOptions;
     private JComboBox<Project> buildToolOptions;
     private JLabel languageVersionLabel;
-    private JComboBox<Framework> projectTypeOptions;
+    private JComboBox<Framework> frameworkOptions;
     private JLabel nameLabel;
     private JLabel locationLabel;
     private JLabel languageLabel;
@@ -35,19 +33,16 @@ public class InitializationForm {
     private JLabel projectType;
 
     public InitializationForm() {
-        // Initialize the location field with a folder chooser
+        // Créez un FileChooserDescriptor pour sélectionner un seul dossier
         FileChooserDescriptor folderChooserDescriptor = FileChooserDescriptorFactory.createSingleFolderDescriptor();
-        folderChooserDescriptor.setTitle("Select Folder");
-        folderChooserDescriptor.setDescription("Choose a directory for the project location");
+        folderChooserDescriptor.withTitle("Select Folder");
+        folderChooserDescriptor.withDescription("Choose a directory for the project location");
 
-        TextBrowseFolderListener folderListener = new TextBrowseFolderListener(folderChooserDescriptor) {
-            @Override
-            protected void onFileChosen(VirtualFile chosenFile) {
-                locationField.setText(chosenFile.getPath());
-            }
-        };
-
-        locationField.addBrowseFolderListener(folderListener);
+        // Ajoutez un écouteur de sélection de dossier au champ de texte
+        locationField.addBrowseFolderListener(
+               null, // Projet (null si non applicable)
+                folderChooserDescriptor
+        );
 
         // Populate initial options and set default selections
         populateLanguageOptions();
@@ -66,8 +61,8 @@ public class InitializationForm {
             }
         });
 
-        frameworkOptions.addActionListener(e -> {
-            String selectedFramework = (String) frameworkOptions.getSelectedItem();
+        coreFrameworkOptions.addActionListener(e -> {
+            String selectedFramework = (String) coreFrameworkOptions.getSelectedItem();
             if (selectedFramework != null) {
                 populateBuildToolOptions(selectedFramework);
                 populateProjectTypeOptions(selectedFramework);
@@ -85,9 +80,9 @@ public class InitializationForm {
             }
         }
 
-        if (frameworkOptions.getItemCount() > 0) {
-            frameworkOptions.setSelectedIndex(0);
-            String defaultFramework = (String) frameworkOptions.getSelectedItem();
+        if (coreFrameworkOptions.getItemCount() > 0) {
+            coreFrameworkOptions.setSelectedIndex(0);
+            String defaultFramework = (String) coreFrameworkOptions.getSelectedItem();
             if (defaultFramework != null) {
                 populateBuildToolOptions(defaultFramework);
                 populateProjectTypeOptions(defaultFramework);
@@ -103,14 +98,30 @@ public class InitializationForm {
     }
 
     private void populateFrameworkOptions(Language language) {
-        frameworkOptions.removeAllItems();
+        coreFrameworkOptions.removeAllItems();
         List<String> frameworks = ProjectGenerator.frameworks.values().stream()
                 .filter(f -> f.getLanguageId() == language.getId())
-                .map(Framework::getBaseFramework)
+                .map(Framework::getCoreFramework)
                 .distinct()
                 .toList();
 
         for (String framework : frameworks) {
+            coreFrameworkOptions.addItem(framework);
+        }
+
+        if (coreFrameworkOptions.getItemCount() > 0) {
+            coreFrameworkOptions.setSelectedIndex(0);
+        }
+    }
+
+    private void populateProjectTypeOptions(String coreFramework) {
+        frameworkOptions.removeAllItems();
+        List<Framework> frameworks = ProjectGenerator.frameworks.values().stream()
+                .filter(f -> f.getCoreFramework().equalsIgnoreCase(coreFramework))
+                .distinct()
+                .toList();
+
+        for (Framework framework : frameworks) {
             frameworkOptions.addItem(framework);
         }
 
@@ -119,26 +130,10 @@ public class InitializationForm {
         }
     }
 
-    private void populateProjectTypeOptions(String baseFramework) {
-        projectTypeOptions.removeAllItems();
-        List<Framework> frameworks = ProjectGenerator.frameworks.values().stream()
-                .filter(f -> f.getBaseFramework().equalsIgnoreCase(baseFramework))
-                .distinct()
-                .toList();
-
-        for (Framework framework : frameworks) {
-            projectTypeOptions.addItem(framework);
-        }
-
-        if (projectTypeOptions.getItemCount() > 0) {
-            projectTypeOptions.setSelectedIndex(0);
-        }
-    }
-
     private void populateBuildToolOptions(String framework) {
         buildToolOptions.removeAllItems();
         for (Project project : ProjectGenerator.projects.values()) {
-            if (project.getBaseFrameworks().contains(framework)) {
+            if (project.getCoreFrameworks().contains(framework)) {
                 buildToolOptions.addItem(project);
             }
         }

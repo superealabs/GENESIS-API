@@ -6,7 +6,11 @@ import com.intellij.openapi.module.ModuleType;
 import com.intellij.openapi.roots.ui.configuration.ModulesProvider;
 import org.jetbrains.annotations.NotNull;
 import org.plugin.genesis.icon.SdkIcons;
+import org.plugin.genesis.wizards.DatabaseConfigurationWizardStep;
 import org.plugin.genesis.wizards.FinalModuleWizardStep;
+import handler.*;
+import org.plugin.genesis.wizards.InitializationWizardStep;
+
 
 import javax.swing.*;
 
@@ -44,8 +48,13 @@ final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
     public ModuleWizardStep @NotNull [] createWizardSteps(@NotNull WizardContext wizardContext,
                                                           @NotNull GenesisApiModuleBuilder moduleBuilder,
                                                           @NotNull ModulesProvider modulesProvider) {
+
+        ProjectGenerationContext projectGenerationContext = new ProjectGenerationContext();
+
         return new ModuleWizardStep[]{
-                new FinalModuleWizardStep()
+                new InitializationWizardStep(projectGenerationContext),
+                new DatabaseConfigurationWizardStep(projectGenerationContext),
+                new FinalModuleWizardStep(projectGenerationContext)
         };
     }
 }

@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/dialog/DatabaseConfigDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/action/PopupDialogAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/icons/SdkIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/icon/SdkIcons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/form/InitialisationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/form/InitialisationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/wizards/FinalModuleWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/FinalModuleWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/wizards/InitializationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +56,30 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="intellij" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
               <path>
@@ -71,8 +91,7 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -113,44 +132,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build demo.executor": "Run",
-    "Gradle.Build.executor": "Run",
-    "Gradle.Clean.executor": "Run",
-    "Gradle.GENESIS-Plugin [assemble].executor": "Run",
-    "Gradle.GENESIS-Plugin [build].executor": "Run",
-    "Gradle.GENESIS-Plugin [clean].executor": "Run",
-    "Gradle.GENESIS-Plugin [setupDependencies].executor": "Run",
-    "Gradle.Run Plugin.executor": "Run",
-    "Gradle.Run.executor": "Run",
-    "Gradle.demo [buildPlugin].executor": "Run",
-    "Gradle.demo [setupDependencies].executor": "Run",
-    "Kotlin script (Beta).build.gradle.kts.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "209",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "265",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/nomena/STAGE/GENESIS-Plugin/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2689655",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build demo.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Clean.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GENESIS-Plugin [assemble].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GENESIS-Plugin [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GENESIS-Plugin [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GENESIS-Plugin [setupDependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Run Plugin.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Run.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.demo [buildPlugin].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.demo [setupDependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin script (Beta).build.gradle.kts.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;209&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;265&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nomena/STAGE/GENESIS-Plugin/libs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2689655&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/main/resources/icons" />
     </key>
@@ -160,7 +185,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/icons" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Run">
+  <component name="RunManager" selected="Gradle.Clean">
     <configuration name="Build" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -259,9 +284,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Clean" />
+        <item itemvalue="Gradle.Build" />
         <item itemvalue="Gradle.GENESIS-Plugin [build]" />
         <item itemvalue="Gradle.GENESIS-Plugin [assemble]" />
-        <item itemvalue="Gradle.Build" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +335,11 @@
       <workItem from="1732288135572" duration="14879000" />
       <workItem from="1732358074694" duration="1464000" />
       <workItem from="1732361966699" duration="253000" />
-      <workItem from="1732362277271" duration="12285000" />
+      <workItem from="1732362277271" duration="13630000" />
+      <workItem from="1732389642965" duration="343000" />
+      <workItem from="1732390045535" duration="702000" />
+      <workItem from="1732420362538" duration="1573000" />
+      <workItem from="1732426617045" duration="188000" />
     </task>
     <servers />
   </component>

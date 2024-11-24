@@ -6,14 +6,19 @@ import com.intellij.openapi.options.ConfigurationException;
 import genesis.config.langage.Framework;
 import genesis.config.langage.Language;
 import genesis.config.langage.Project;
+import handler.ProjectGenerationContext;
 import org.plugin.genesis.forms.InitializationForm;
 
 import javax.swing.*;
+import java.util.Map;
+
 public class InitializationWizardStep extends ModuleWizardStep {
     private final InitializationForm newProjectPanel;
+    private final ProjectGenerationContext projectGenerationContext;
 
-    public InitializationWizardStep() {
+    public InitializationWizardStep(ProjectGenerationContext projectGenerationContext) {
         newProjectPanel = new InitializationForm();
+        this.projectGenerationContext = projectGenerationContext;
     }
 
     @Override
@@ -23,8 +28,26 @@ public class InitializationWizardStep extends ModuleWizardStep {
 
     @Override
     public void updateDataModel() {
-        // This method can be used to update the data model if needed
+        // Récupérer les valeurs depuis le formulaire
+        String projectName = newProjectPanel.getProjectNameField().getText().trim();
+        String location = newProjectPanel.getLocationField().getText().trim();
+        Language language = (Language) newProjectPanel.getLanguageOptions().getSelectedItem();
+        String languageVersion = (String) newProjectPanel.getLanguageVersionOptions().getSelectedItem();
+        Framework framework = (Framework) newProjectPanel.getFrameworkOptions().getSelectedItem();
+        Project buildTool = (Project) newProjectPanel.getBuildToolOptions().getSelectedItem();
+
+        assert languageVersion != null;
+        Map<String, Object> languageConfiguration = Map.of("languageVerison", languageVersion);
+        projectGenerationContext.setLanguageConfiguration(languageConfiguration);
+
+        projectGenerationContext
+                .setProjectName(projectName)
+                .setDestinationFolder(location)
+                .setLanguage(language)
+                .setFramework(framework)
+                .setProject(buildTool);
     }
+
     @Override
     public boolean validate() throws ConfigurationException {
         // Retrieve selected values
@@ -32,8 +55,8 @@ public class InitializationWizardStep extends ModuleWizardStep {
         String location = newProjectPanel.getLocationField().getText().trim();
         Language language = (Language) newProjectPanel.getLanguageOptions().getSelectedItem();
         String languageVersion = (String) newProjectPanel.getLanguageVersionOptions().getSelectedItem();
-        String framework = (String) newProjectPanel.getFrameworkOptions().getSelectedItem();
-        Framework projectType = (Framework) newProjectPanel.getProjectTypeOptions().getSelectedItem();
+        String framework = (String) newProjectPanel.getCoreFrameworkOptions().getSelectedItem();
+        Framework projectType = (Framework) newProjectPanel.getFrameworkOptions().getSelectedItem();
         Project buildTool = (Project) newProjectPanel.getBuildToolOptions().getSelectedItem();
 
         // Validate the project name

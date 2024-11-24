@@ -22,12 +22,6 @@ public class GenesisApiModuleBuilder extends ModuleBuilder {
         return moduleType;
     }
 
-    @Nullable
-    @Override
-    public ModuleWizardStep getCustomOptionsStep(WizardContext context, Disposable parentDisposable) {
-        return new InitializationWizardStep();
-    }
-
     @NotNull
     @Override
     public String getName() {

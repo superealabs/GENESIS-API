@@ -10,10 +10,6 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven("https://www.jetbrains.com/intellij-repository/releases")
-    // Ajout du référentiel local
-    flatDir {
-        dirs("lib")
-    }
 }
 
 intellij {
@@ -28,8 +24,6 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.36")
     testCompileOnly("org.projectlombok:lombok:1.18.36")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.36")
-    // Inclusion de tous les JARs du dossier lib
-    implementation(fileTree(mapOf("dir" to "lib", "include" to listOf("*.jar"))))
 }
 
 tasks {

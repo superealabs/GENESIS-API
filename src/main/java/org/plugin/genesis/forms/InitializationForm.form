@@ -44,10 +44,10 @@
         </constraints>
         <properties/>
       </component>
-      <component id="a38a1" class="javax.swing.JComboBox" binding="frameworkOptions">
+      <component id="a38a1" class="javax.swing.JComboBox" binding="coreFrameworkOptions">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="250" height="34"/>
+            <preferred-size width="200" height="34"/>
           </grid>
         </constraints>
         <properties>
@@ -123,7 +123,7 @@
           <text value="Project type:"/>
         </properties>
       </component>
-      <component id="b6bdb" class="javax.swing.JComboBox" binding="projectTypeOptions">
+      <component id="b6bdb" class="javax.swing.JComboBox" binding="frameworkOptions">
         <constraints>
           <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="250" height="34"/>
@@ -145,7 +145,7 @@
       <component id="a1d59" class="javax.swing.JComboBox" binding="buildToolOptions">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="34"/>
+            <preferred-size width="200" height="34"/>
           </grid>
         </constraints>
         <properties/>
