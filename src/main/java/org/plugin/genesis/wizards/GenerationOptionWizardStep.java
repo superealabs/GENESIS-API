@@ -29,9 +29,9 @@ public class GenerationOptionWizardStep extends ModuleWizardStep {
         projectGenerationContext.setEntityNames(selectedTables);
 
         // Get selected component
-        String selectedComponent = generationOptionForm.getComponentChoice().getSelectedValue();
+        List<String> selectedComponent = generationOptionForm.getComponentChoice().getSelectedValuesList();
         if (selectedComponent != null) {
-            projectGenerationContext.setGenerationOptions(List.of(selectedComponent));
+            projectGenerationContext.setGenerationOptions(selectedComponent);
         }
 
         // Store groupId and full project generation flag

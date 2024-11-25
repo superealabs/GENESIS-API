@@ -11,6 +11,9 @@ import org.plugin.genesis.forms.DatabaseConfigurationForm;
 
 import javax.swing.*;
 
+
+import static org.plugin.genesis.Utils.formatErrorMessageHtml;
+
 public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
     private final DatabaseConfigurationForm databaseConfigurationForm;
     private final ProjectGenerationContext projectGenerationContext;
@@ -24,44 +27,64 @@ public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
     public JComponent getComponent() {
         return databaseConfigurationForm.getMainPanel();
     }
+
     @Override
     public void updateDataModel() {
-        // Retrieve selected database
+        // Retrieve the selected database
         Database selectedDatabase = (Database) databaseConfigurationForm.getDmsOptions().getSelectedItem();
 
         if (selectedDatabase != null) {
-            // Update database in the context
-            projectGenerationContext.setDatabase(selectedDatabase);
-
-            // Create credentials from the form inputs
-            Credentials credentials = selectedDatabase.getCredentials();
-
-            // Update credentials in the context
-            projectGenerationContext.setCredentials(credentials);
-
-            // Attempt to establish the connection
             try {
-                // Close existing connection if any
-                if (projectGenerationContext.getConnection() != null) {
-                    projectGenerationContext.getConnection().close();
-                }
+                // Update context and attempt connection
+                updateContextAndEstablishConnection(selectedDatabase);
 
-                // Establish a new connection and update the context
-                projectGenerationContext.setConnection(selectedDatabase.getConnection(credentials));
-
-                // Update connection status label
+                // Update the UI with success feedback
                 databaseConfigurationForm.getConnectionStatusLabel().setText("<html>Connection successful!</html>");
                 databaseConfigurationForm.getConnectionStatusLabel().setForeground(JBColor.GREEN);
                 databaseConfigurationForm.setConnectionSuccessful(true);
+
             } catch (Exception e) {
-                // Update connection status label with error message
+                // Update the UI with error feedback
                 String formattedMessageHtml = formatErrorMessageHtml(e.getMessage());
                 databaseConfigurationForm.getConnectionStatusLabel().setText("<html>Connection failed:<br>" + formattedMessageHtml + "</html>");
                 databaseConfigurationForm.getConnectionStatusLabel().setForeground(JBColor.RED);
                 databaseConfigurationForm.setConnectionSuccessful(false);
+
+                Messages.showErrorDialog(
+                        databaseConfigurationForm.getMainPanel(),
+                        "Connection failed: " + e.getMessage(),
+                        "Error"
+                );
+
+                System.err.println("Connection failed: " + e.getMessage());
+                e.printStackTrace();
             }
         }
     }
+
+    /**
+     * Updates the context with the selected database and credentials, then establishes a connection.
+     *
+     * @param selectedDatabase The selected database.
+     * @throws Exception If an error occurs during the connection.
+     */
+    private void updateContextAndEstablishConnection(Database selectedDatabase) throws Exception {
+        // Update database in the context
+        projectGenerationContext.setDatabase(selectedDatabase);
+
+        // Create credentials from the form inputs
+        Credentials credentials = selectedDatabase.getCredentials();
+        projectGenerationContext.setCredentials(credentials);
+
+        // Close existing connection if any
+        if (projectGenerationContext.getConnection() != null) {
+            projectGenerationContext.getConnection().close();
+        }
+
+        // Establish a new connection and update the context
+        projectGenerationContext.setConnection(selectedDatabase.getConnection(credentials));
+    }
+
 
     @Override
     public boolean validate() throws ConfigurationException {
@@ -74,19 +97,12 @@ public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
         // Validate database-specific fields
         validateDatabaseSpecificFields();
 
-        // Test connection and ensure it is successful
+        // Vérifiez la connexion
         if (!databaseConfigurationForm.isConnectionSuccessful()) {
-            throw new ConfigurationException("Please test the connection and ensure it is successful before proceeding.");
+            throw new ConfigurationException("Cannot proceed: Database connection failed. Please test the connection and ensure it is successful.");
         }
 
-        // Display a message indicating success
-        Messages.showInfoMessage(
-                databaseConfigurationForm.getMainPanel(),
-                "Connection test passed successfully. Proceeding to the next step.",
-                "Connection Test Success"
-        );
-
-        return true;
+        return true; // Si toutes les validations passent
     }
 
 
@@ -139,18 +155,4 @@ public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
         }
     }
 
-    private void validateConnectionTest() throws ConfigurationException {
-        if (!databaseConfigurationForm.isConnectionSuccessful()) {
-            throw new ConfigurationException("Please test the connection and ensure it is successful before proceeding.");
-        }
-    }
-
-    // Utility method to format error messages as HTML
-    private String formatErrorMessageHtml(String message) {
-        if (message == null || message.isEmpty()) {
-            return "Unknown error.";
-        }
-        // Split the message by ". " (period followed by a space) and join with <br> for HTML
-        return String.join("<br>", message.split("\\.\\s"));
-    }
 }

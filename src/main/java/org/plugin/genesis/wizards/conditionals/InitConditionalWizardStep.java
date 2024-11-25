@@ -39,7 +39,8 @@ public class InitConditionalWizardStep extends ModuleWizardStep {
     @Override
     public boolean isStepVisible() {
         Framework framework = context.getFramework();
-        return framework != null && framework.getUseDB();
+        return framework != null
+                && framework.getUseDB();
     }
 
 }

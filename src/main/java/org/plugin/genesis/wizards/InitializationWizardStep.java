@@ -102,15 +102,6 @@ public class InitializationWizardStep extends ModuleWizardStep {
             throw new ConfigurationException("Please select a build tool.");
         }
 
-        // Print selected values to the console
-        System.out.println("Project Name: " + projectName);
-        System.out.println("Location: " + location);
-        System.out.println("Language: " + language.getName());
-        System.out.println("Language Version: " + languageVersion);
-        System.out.println("Framework: " + framework);
-        System.out.println("Project Type: " + projectType.getName());
-        System.out.println("Build Tool: " + buildTool.getName());
-
         // If all validations pass, return true
         return true;
     }

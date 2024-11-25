@@ -81,12 +81,13 @@
         </constraints>
         <properties>
           <model>
+            <item value="* (select all)"/>
             <item value="Model"/>
             <item value="DAO"/>
             <item value="Service"/>
             <item value="Controller"/>
           </model>
-          <selectionMode value="0"/>
+          <selectionMode value="2"/>
         </properties>
       </component>
     </children>

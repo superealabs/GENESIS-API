@@ -7,6 +7,7 @@ package org.plugin.genesis.forms;
 
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.JBColor;
+import com.intellij.ui.components.labels.LinkLabel;
 import genesis.config.langage.generator.project.ProjectGenerator;
 import genesis.connexion.Credentials;
 import genesis.connexion.Database;
@@ -48,7 +49,7 @@ public class DatabaseConfigurationForm {
     private JTextField sidField;
     private JLabel sidLabel;
 
-    private JButton testConnectionButton;
+    private LinkLabel<String> testConnectionButton;
     private JLabel connectionStatusLabel;
 
     @Setter
@@ -66,9 +67,8 @@ public class DatabaseConfigurationForm {
         addTestConnectionButtonListener();
     }
 
-
     private void addTestConnectionButtonListener() {
-        testConnectionButton.addActionListener(e -> {
+        testConnectionButton.setListener((LinkLabel<String> source, String data) -> {
             // Retrieve the selected database
             Database selectedDatabase = (Database) dmsOptions.getSelectedItem();
             if (selectedDatabase != null) {
@@ -116,7 +116,7 @@ public class DatabaseConfigurationForm {
                     connectionSuccessful = false;
                 }
             }
-        });
+        }, null);
     }
 
 
