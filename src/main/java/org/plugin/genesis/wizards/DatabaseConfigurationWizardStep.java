@@ -2,6 +2,8 @@ package org.plugin.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.openapi.options.ConfigurationException;
+import com.intellij.openapi.ui.Messages;
+import com.intellij.ui.JBColor;
 import genesis.connexion.Credentials;
 import genesis.connexion.Database;
 import handler.ProjectGenerationContext;
@@ -22,7 +24,6 @@ public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
     public JComponent getComponent() {
         return databaseConfigurationForm.getMainPanel();
     }
-
     @Override
     public void updateDataModel() {
         // Retrieve selected database
@@ -38,12 +39,26 @@ public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
             // Update credentials in the context
             projectGenerationContext.setCredentials(credentials);
 
-            // Optionally test the connection (optional logic can be added here)
+            // Attempt to establish the connection
             try {
+                // Close existing connection if any
+                if (projectGenerationContext.getConnection() != null) {
+                    projectGenerationContext.getConnection().close();
+                }
+
+                // Establish a new connection and update the context
                 projectGenerationContext.setConnection(selectedDatabase.getConnection(credentials));
+
+                // Update connection status label
+                databaseConfigurationForm.getConnectionStatusLabel().setText("<html>Connection successful!</html>");
+                databaseConfigurationForm.getConnectionStatusLabel().setForeground(JBColor.GREEN);
+                databaseConfigurationForm.setConnectionSuccessful(true);
             } catch (Exception e) {
-                // Log connection error (optional)
-                throw new RuntimeException("Connection test failed: " + e.getMessage());
+                // Update connection status label with error message
+                String formattedMessageHtml = formatErrorMessageHtml(e.getMessage());
+                databaseConfigurationForm.getConnectionStatusLabel().setText("<html>Connection failed:<br>" + formattedMessageHtml + "</html>");
+                databaseConfigurationForm.getConnectionStatusLabel().setForeground(JBColor.RED);
+                databaseConfigurationForm.setConnectionSuccessful(false);
             }
         }
     }
@@ -59,11 +74,21 @@ public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
         // Validate database-specific fields
         validateDatabaseSpecificFields();
 
-        // Ensure connection is tested successfully
-        validateConnectionTest();
+        // Test connection and ensure it is successful
+        if (!databaseConfigurationForm.isConnectionSuccessful()) {
+            throw new ConfigurationException("Please test the connection and ensure it is successful before proceeding.");
+        }
+
+        // Display a message indicating success
+        Messages.showInfoMessage(
+                databaseConfigurationForm.getMainPanel(),
+                "Connection test passed successfully. Proceeding to the next step.",
+                "Connection Test Success"
+        );
 
         return true;
     }
+
 
     private void validateRequiredFields() throws ConfigurationException {
         String host = databaseConfigurationForm.getHostField().getText().trim();
@@ -120,5 +145,12 @@ public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
         }
     }
 
-
+    // Utility method to format error messages as HTML
+    private String formatErrorMessageHtml(String message) {
+        if (message == null || message.isEmpty()) {
+            return "Unknown error.";
+        }
+        // Split the message by ". " (period followed by a space) and join with <br> for HTML
+        return String.join("<br>", message.split("\\.\\s"));
+    }
 }

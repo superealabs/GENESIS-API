@@ -5,16 +5,21 @@
 
 package org.plugin.genesis.forms;
 
+import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.JBColor;
 import genesis.config.langage.generator.project.ProjectGenerator;
 import genesis.connexion.Credentials;
 import genesis.connexion.Database;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.event.ActionListener;
+
+import static org.plugin.genesis.Utils.formatErrorMessage;
+import static org.plugin.genesis.Utils.formatErrorMessageHtml;
 
 @Getter
 public class DatabaseConfigurationForm {
@@ -46,8 +51,8 @@ public class DatabaseConfigurationForm {
     private JButton testConnectionButton;
     private JLabel connectionStatusLabel;
 
+    @Setter
     private boolean connectionSuccessful = false;
-
 
     public DatabaseConfigurationForm() {
         populateDmsOptions();
@@ -60,6 +65,7 @@ public class DatabaseConfigurationForm {
 
         addTestConnectionButtonListener();
     }
+
 
     private void addTestConnectionButtonListener() {
         testConnectionButton.addActionListener(e -> {
@@ -84,52 +90,33 @@ public class DatabaseConfigurationForm {
                 // Attempt to establish the connection
                 try {
                     selectedDatabase.getConnection(credentials).close();
-                    JOptionPane.showMessageDialog(
+
+                    Messages.showInfoMessage(
                             mainPanel,
                             "Connection successful!",
-                            "Success",
-                            JOptionPane.INFORMATION_MESSAGE
+                            "Success"
                     );
                     connectionStatusLabel.setText("<html>Connection successful!</html>");
                     connectionStatusLabel.setForeground(JBColor.GREEN);
                     connectionSuccessful = true;
                 } catch (Exception ex) {
-                    // Format the error message as HTML
                     String formattedMessage = formatErrorMessage(ex.getMessage());
-                    String formatErrorMessageHtml = formatErrorMessageHtml(ex.getMessage());
+                    String formattedMessageHtml = formatErrorMessageHtml(ex.getMessage());
 
                     // Display the formatted error message in a popup
-                    JOptionPane.showMessageDialog(
+                    Messages.showErrorDialog(
                             mainPanel,
                             "Connection failed:\n" + formattedMessage,
-                            "Error",
-                            JOptionPane.ERROR_MESSAGE
+                            "Error"
                     );
 
                     // Update the connection status label with the formatted HTML message
-                    connectionStatusLabel.setText("<html>Connection failed:<br>" + formatErrorMessageHtml + "</html>");
+                    connectionStatusLabel.setText("<html>Connection failed:<br>" + formattedMessageHtml + "</html>");
                     connectionStatusLabel.setForeground(JBColor.RED);
                     connectionSuccessful = false;
                 }
             }
         });
-    }
-
-
-    private String formatErrorMessage(String message) {
-        if (message == null || message.isEmpty()) {
-            return "Unknown error.";
-        }
-        // Split the message by ". " (period followed by a space) and join with <br> for HTML
-        return String.join("\n", message.split("\\.\\s"));
-    }
-
-    private String formatErrorMessageHtml(String message) {
-        if (message == null || message.isEmpty()) {
-            return "Unknown error.";
-        }
-        // Split the message by ". " (period followed by a space) and join with <br> for HTML
-        return String.join("<br>", message.split("\\.\\s"));
     }
 
 

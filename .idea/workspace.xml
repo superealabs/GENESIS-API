@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/InitConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/InitConditionalWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/GenerationOptionWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/GenerationOptionWizardStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/java/com/labs/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/java/com/labs/apigateway/ApiGatewayApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/java/com/labs/apigateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/sample-projects/ApiGateway/src/main/java/com/labs/apigateway/config/SecurityConfig.java" afterDir="false" />
@@ -62,6 +59,7 @@
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/handler/ProjectGeneratorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/handler/ProjectGeneratorHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/java/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/java/utils/FileUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/json/languages.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/json/languages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/yaml/projects.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/main/resources/data_genesis/yaml/projects.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/test/java/connexionBaseOracle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/test/java/connexionBaseOracle/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/test/java/project/ProjectGeneratorCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/test/java/project/ProjectGeneratorCLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GENESIS/src/test/java/templateEngine/GenesisTemplateEngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GENESIS/src/test/java/templateEngine/GenesisTemplateEngineTest.java" afterDir="false" />
@@ -190,6 +188,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.GenesisApiCLI.executor": "Run",
     "Gradle.Build demo.executor": "Run",
     "Gradle.Build.executor": "Run",
     "Gradle.Clean.executor": "Run",
@@ -198,7 +197,7 @@
     "Gradle.GENESIS-Plugin [init].executor": "Run",
     "Gradle.GENESIS-Plugin [setupDependencies].executor": "Run",
     "Gradle.Run Plugin.executor": "Run",
-    "Gradle.Run.executor": "Run",
+    "Gradle.Run.executor": "Debug",
     "Gradle.Upgrade Gradle wrapper.executor": "Run",
     "Gradle.demo [buildPlugin].executor": "Run",
     "Gradle.demo [setupDependencies].executor": "Run",
@@ -208,7 +207,7 @@
     "Maven.GENESIS [package,-DskipTests...].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "137",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "261",
@@ -252,7 +251,14 @@
       <command value="mvn package -DskipTests -Dmaven.test.skip=true" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Run">
+  <component name="RunManager" selected="Application.GenesisApiCLI">
+    <configuration name="GenesisApiCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GenesisApiCLI" />
+      <module name="GENESIS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Build" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -287,28 +293,6 @@
         <option name="taskNames">
           <list>
             <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="GENESIS-Plugin [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -358,20 +342,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.GenesisApiCLI" />
       <item itemvalue="Gradle.Run" />
       <item itemvalue="Gradle.GENESIS-Plugin [init]" />
-      <item itemvalue="Gradle.GENESIS-Plugin [build]" />
       <item itemvalue="Gradle.Clean" />
       <item itemvalue="Gradle.Build" />
       <item itemvalue="JUnit.ProjectGeneratorCLI.generateProjectSpring" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GenesisApiCLI" />
         <item itemvalue="Gradle.Clean" />
         <item itemvalue="JUnit.ProjectGeneratorCLI.generateProjectSpring" />
         <item itemvalue="Gradle.Build" />
         <item itemvalue="Gradle.GENESIS-Plugin [init]" />
-        <item itemvalue="Gradle.GENESIS-Plugin [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +403,7 @@
       <workItem from="1732429023381" duration="8086000" />
       <workItem from="1732443948562" duration="1329000" />
       <workItem from="1732451102804" duration="20901000" />
-      <workItem from="1732479965207" duration="1984000" />
+      <workItem from="1732479965207" duration="18355000" />
     </task>
     <servers />
   </component>
@@ -435,9 +419,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
