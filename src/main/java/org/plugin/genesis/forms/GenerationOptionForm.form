@@ -54,7 +54,6 @@
         </constraints>
         <properties>
           <model>
-            <item value="* (select all)"/>
             <item value="Model"/>
             <item value="DAO"/>
             <item value="Service"/>

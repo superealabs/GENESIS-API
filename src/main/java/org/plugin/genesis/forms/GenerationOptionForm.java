@@ -20,6 +20,7 @@ public class GenerationOptionForm {
     private LinkLabel<String> refreshLinkLabel;
     private JBList<String> componentChoice;
     private JLabel componentsLabel;
+    public static String SELECT_ALL = "* (select all)";
 
     public GenerationOptionForm(ProjectGenerationContext projectGenerationContext) {
         this.projectGenerationContext = projectGenerationContext;
@@ -32,28 +33,37 @@ public class GenerationOptionForm {
     }
 
     public void populateTableNames() {
-        Database database = projectGenerationContext.getDatabase();
-        Connection connection = projectGenerationContext.getConnection();
-
-        if (database != null && connection != null) {
-            try {
-                List<String> allTableNames = database.getAllTableNames(connection);
-                allTableNames.addFirst("* (select all)");
-                tableNamesList.setListData(allTableNames.toArray(new String[0]));
-            } catch (Exception e) {
-                Messages.showErrorDialog(
-                        mainPanel,
-                        "Failed to retrieve table names: " + e.getMessage(),
-                        "Error"
-                );
-            }
-        } else {
+        try {
+            List<String> allTableNames = getAllTableNames();
+            tableNamesList.setListData(allTableNames.toArray(new String[0]));
+        } catch (IllegalStateException e) {
             Messages.showErrorDialog(
                     mainPanel,
-                    "Database or connection not defined.",
+                    e.getMessage(),
+                    "Error"
+            );
+        } catch (Exception e) {
+            Messages.showErrorDialog(
+                    mainPanel,
+                    "Failed to retrieve table names: " + e.getMessage(),
                     "Error"
             );
         }
     }
+
+    public List<String> getAllTableNames() throws Exception {
+        Database database = projectGenerationContext.getDatabase();
+        Connection connection = projectGenerationContext.getConnection();
+
+        if (database == null || connection == null) {
+            throw new IllegalStateException("Database or connection is not defined.");
+        }
+
+        // Récupérer les noms de tables et ajouter l'option spéciale
+        List<String> allTableNames = database.getAllTableNames(connection);
+        allTableNames.addFirst(SELECT_ALL); // Ajouter l'option pour tout sélectionner
+        return allTableNames;
+    }
+
 }
 

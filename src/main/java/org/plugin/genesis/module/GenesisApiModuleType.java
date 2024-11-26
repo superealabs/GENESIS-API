@@ -32,10 +32,13 @@ final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
         SpecificConfigurationWizardStep specificConfigurationWizardStep = new SpecificConfigurationWizardStep(projectGenerationContext);
         DatabaseConfigurationWizardStep databaseConfigurationWizardStep = new DatabaseConfigurationWizardStep(projectGenerationContext);
         InitConditionalWizardStep initConditionalWizardStep = new InitConditionalWizardStep(projectGenerationContext, databaseConfigurationWizardStep);
+        GenerationOptionWizardStep generationOptionWizardStep = new GenerationOptionWizardStep(projectGenerationContext);
+        GenConfigConditionalWizardStep genConfigConditionalWizardStep = new GenConfigConditionalWizardStep(projectGenerationContext, generationOptionWizardStep);
 
         return new ModuleWizardStep[]{
                 new InitializationWizardStep(projectGenerationContext, specificConfigurationWizardStep),
                 initConditionalWizardStep,
+                genConfigConditionalWizardStep,
                 specificConfigurationWizardStep
         };
     }

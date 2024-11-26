@@ -16,6 +16,8 @@ import java.util.Objects;
 public class SpecificConfigurationWizardStep extends ModuleWizardStep {
     private final SpecificConfigurationForm specificConfigurationForm;
     private final ProjectGenerationContext projectGenerationContext;
+    private final ProjectGenerator projectGenerator = new ProjectGenerator();
+
 
     public SpecificConfigurationWizardStep(ProjectGenerationContext projectGenerationContext) {
         this.specificConfigurationForm = new SpecificConfigurationForm();
@@ -29,6 +31,7 @@ public class SpecificConfigurationWizardStep extends ModuleWizardStep {
     public JComponent getComponent() {
         return specificConfigurationForm.getMainPanel();
     }
+
     @Override
     public void updateDataModel() {
         Framework framework = projectGenerationContext.getFramework();
@@ -36,7 +39,9 @@ public class SpecificConfigurationWizardStep extends ModuleWizardStep {
 
         // Gestion d'Eureka
         if (specificConfigurationForm.getUseAnEurekaServerCheckBox().isSelected()) {
-            frameworkConfiguration.put("eurekaServerHost", specificConfigurationForm.getEurekaServerHostField().getText().trim());
+            framework.setUseCloud(true);
+            framework.setUseEurekaServer(true);
+            frameworkConfiguration.put("eurekaServerURL", specificConfigurationForm.getEurekaServerHostField().getText().trim());
         }
 
         // Gestion de loggingLevel
@@ -132,7 +137,6 @@ public class SpecificConfigurationWizardStep extends ModuleWizardStep {
     }
 
     private void generateProject() {
-        ProjectGenerator projectGenerator = new ProjectGenerator();
         try {
             projectGenerator.generateProject(projectGenerationContext);
         } catch (Exception e) {
