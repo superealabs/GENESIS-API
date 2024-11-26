@@ -36,11 +36,15 @@ public class InitializationWizardStep extends ModuleWizardStep {
         String location = newProjectPanel.getLocationField().getText().trim();
         Language language = (Language) newProjectPanel.getLanguageOptions().getSelectedItem();
         String languageVersion = (String) newProjectPanel.getLanguageVersionOptions().getSelectedItem();
+        String frameworkVersion = (String) newProjectPanel.getFrameworkVersionOptions().getSelectedItem();
         Framework framework = (Framework) newProjectPanel.getFrameworkOptions().getSelectedItem();
         Project buildTool = (Project) newProjectPanel.getBuildToolOptions().getSelectedItem();
 
         assert languageVersion != null;
-        Map<String, Object> languageConfiguration = Map.of("languageVersion", languageVersion);
+        Map<String, Object> languageConfiguration = Map.of(
+                "languageVersion", languageVersion,
+                "frameworkVersion", frameworkVersion
+        );
         projectGenerationContext.setLanguageConfiguration(languageConfiguration);
 
         projectGenerationContext
@@ -62,6 +66,7 @@ public class InitializationWizardStep extends ModuleWizardStep {
         String location = newProjectPanel.getLocationField().getText().trim();
         Language language = (Language) newProjectPanel.getLanguageOptions().getSelectedItem();
         String languageVersion = (String) newProjectPanel.getLanguageVersionOptions().getSelectedItem();
+        String frameworkVersion = (String) newProjectPanel.getFrameworkVersionOptions().getSelectedItem();
         String framework = (String) newProjectPanel.getCoreFrameworkOptions().getSelectedItem();
         Framework projectType = (Framework) newProjectPanel.getFrameworkOptions().getSelectedItem();
         Project buildTool = (Project) newProjectPanel.getBuildToolOptions().getSelectedItem();
@@ -99,6 +104,11 @@ public class InitializationWizardStep extends ModuleWizardStep {
         // Check that a language version is selected
         if (languageVersion == null || languageVersion.equals("Not applicable")) {
             throw new ConfigurationException("Please select a language version.");
+        }
+
+        // Check that a framework version is selected
+        if (frameworkVersion == null) {
+            throw new ConfigurationException("Please select a framework version.");
         }
 
         // Check that a framework is selected
