@@ -24,12 +24,16 @@ public class InitializationForm {
     private JComboBox<Project> buildToolOptions;
     private JLabel languageVersionLabel;
     private JComboBox<Framework> frameworkOptions;
+    private JComboBox<String> frameworkVersionOptions;
     private JLabel nameLabel;
     private JLabel locationLabel;
     private JLabel languageLabel;
     private JLabel frameworkLabel;
     private JLabel buildToolLabel;
     private JLabel projectType;
+    private JLabel frameworkVersionLabel;
+    private JLabel groupIdLabel;
+    private JTextField groupIdField;
 
     public InitializationForm() {
         // Créez un FileChooserDescriptor pour sélectionner un seul dossier
@@ -42,6 +46,9 @@ public class InitializationForm {
                 null, // Projet (null si non applicable)
                 folderChooserDescriptor
         );
+
+        groupIdLabel.setEnabled(false);
+        groupIdField.setEnabled(false);
 
         // Populate initial options and set default selections
         populateLanguageOptions();
@@ -56,18 +63,36 @@ public class InitializationForm {
             Language selectedLanguage = (Language) languageOptions.getSelectedItem();
             if (selectedLanguage != null) {
                 populateLanguageVersionOptions(selectedLanguage);
-                populateFrameworkOptions(selectedLanguage);
+                populateCoreFrameworkOptions(selectedLanguage);
             }
         });
 
-        coreFrameworkOptions.addActionListener(e -> {
-            String selectedFramework = (String) coreFrameworkOptions.getSelectedItem();
+        coreFrameworkOptions.addActionListener(e -> addCoreFrameworkListener());
+
+        frameworkOptions.addActionListener(e -> {
+            Framework selectedFramework = (Framework) frameworkOptions.getSelectedItem();
             if (selectedFramework != null) {
-                populateBuildToolOptions(selectedFramework);
-                populateProjectTypeOptions(selectedFramework);
+                populateFrameworkVersionOptions(selectedFramework);
             }
         });
     }
+
+    private void addCoreFrameworkListener() {
+        String selectedCoreFramework = (String) coreFrameworkOptions.getSelectedItem();
+        if (selectedCoreFramework != null) {
+            populateBuildToolOptions(selectedCoreFramework);
+            populateFrameworkOptions(selectedCoreFramework);
+
+            if (frameworkOptions.getItemCount() > 0) {
+                frameworkOptions.setSelectedIndex(0); // Automatically select the first framework
+                Framework selectedFramework = (Framework) frameworkOptions.getSelectedItem();
+                if (selectedFramework != null) {
+                    populateFrameworkVersionOptions(selectedFramework); // Automatically populate and select the first version
+                }
+            }
+        }
+    }
+
 
     private void initializeDefaultSelections() {
         if (languageOptions.getItemCount() > 0) {
@@ -75,19 +100,16 @@ public class InitializationForm {
             Language defaultLanguage = (Language) languageOptions.getSelectedItem();
             if (defaultLanguage != null) {
                 populateLanguageVersionOptions(defaultLanguage);
-                populateFrameworkOptions(defaultLanguage);
+                populateCoreFrameworkOptions(defaultLanguage);
             }
         }
 
         if (coreFrameworkOptions.getItemCount() > 0) {
             coreFrameworkOptions.setSelectedIndex(0);
-            String defaultFramework = (String) coreFrameworkOptions.getSelectedItem();
-            if (defaultFramework != null) {
-                populateBuildToolOptions(defaultFramework);
-                populateProjectTypeOptions(defaultFramework);
-            }
+            addCoreFrameworkListener();
         }
     }
+
 
     private void populateLanguageOptions() {
         List<Language> languages = ProjectGenerator.languages.values().stream().toList();
@@ -96,7 +118,7 @@ public class InitializationForm {
         }
     }
 
-    private void populateFrameworkOptions(Language language) {
+    private void populateCoreFrameworkOptions(Language language) {
         coreFrameworkOptions.removeAllItems();
         List<String> frameworks = ProjectGenerator.frameworks.values().stream()
                 .filter(f -> f.getLanguageId() == language.getId())
@@ -113,7 +135,7 @@ public class InitializationForm {
         }
     }
 
-    private void populateProjectTypeOptions(String coreFramework) {
+    private void populateFrameworkOptions(String coreFramework) {
         frameworkOptions.removeAllItems();
         List<Framework> frameworks = ProjectGenerator.frameworks.values().stream()
                 .filter(f -> f.getCoreFramework().equalsIgnoreCase(coreFramework))
@@ -126,6 +148,18 @@ public class InitializationForm {
 
         if (frameworkOptions.getItemCount() > 0) {
             frameworkOptions.setSelectedIndex(0);
+            Framework selectedFramework = (Framework) frameworkOptions.getSelectedItem();
+            assert selectedFramework != null;
+            if (selectedFramework.getWithGroupId() !=null && selectedFramework.getWithGroupId()) {
+                groupIdLabel.setEnabled(true);
+                groupIdField.setEnabled(true);
+                groupIdField.setText("org.example");
+            }
+            else {
+                groupIdLabel.setEnabled(false);
+                groupIdField.setEnabled(false);
+                groupIdField.setText("");
+            }
         }
     }
 
@@ -153,17 +187,44 @@ public class InitializationForm {
             }
         }
 
-        boolean hasItems = languageVersionOptions.getItemCount() > 0;
+        enableOptions(languageVersionOptions.getItemCount() > 0, languageVersionOptions, languageVersionLabel);
+    }
 
-        if (hasItems) {
-            languageVersionLabel.setEnabled(true);
-            languageVersionOptions.setEnabled(true);
-            languageVersionOptions.setSelectedIndex(0);
-        } else {
-            languageVersionLabel.setEnabled(false);
-            languageVersionOptions.setEnabled(false);
-            languageVersionOptions.addItem("Not applicable");
-            languageVersionOptions.setSelectedIndex(0);
+    private void populateFrameworkVersionOptions(Framework framework) {
+        frameworkVersionOptions.removeAllItems();
+        for (ConfigurationMetadata config : framework.getConfigurations()) {
+            if ("frameworkVersion".equals(config.getVariableName())) {
+                for (String version : config.getOptions()) {
+                    frameworkVersionOptions.addItem(version);
+                }
+                break;
+            }
+        }
+
+        enableOptions(frameworkVersionOptions.getItemCount() > 0, frameworkVersionOptions, frameworkVersionLabel);
+
+        // Automatically select the first version if available
+        if (frameworkVersionOptions.getItemCount() > 0) {
+            frameworkVersionOptions.setSelectedIndex(0);
         }
     }
+
+
+    private void enableOptions(boolean hasItems, JComboBox<String> comboBox, JLabel label) {
+        if (hasItems) {
+            label.setEnabled(true);
+            comboBox.setEnabled(true);
+            if (comboBox.getItemCount() > 0) {
+                comboBox.setSelectedIndex(0);
+            }
+        } else {
+            label.setEnabled(false);
+            comboBox.setEnabled(false);
+            comboBox.removeAllItems();
+            comboBox.addItem("Not applicable");
+            comboBox.setSelectedIndex(0);
+        }
+    }
+
+
 }

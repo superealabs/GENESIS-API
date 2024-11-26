@@ -13,16 +13,13 @@ import java.util.List;
 
 @Getter
 public class GenerationOptionForm {
+    private final ProjectGenerationContext projectGenerationContext;
     private JPanel mainPanel;
     private JBList<String> tableNamesList;
     private JLabel tableAvailableLabel;
-    private JTextField groupIdField;
-    private JLabel groupIdLabel;
-    private JCheckBox generateTheFullProjectCheckBox;
     private LinkLabel<String> refreshLinkLabel;
     private JBList<String> componentChoice;
     private JLabel componentsLabel;
-    private final ProjectGenerationContext projectGenerationContext;
 
     public GenerationOptionForm(ProjectGenerationContext projectGenerationContext) {
         this.projectGenerationContext = projectGenerationContext;
@@ -50,8 +47,7 @@ public class GenerationOptionForm {
                         "Error"
                 );
             }
-        }
-        else {
+        } else {
             Messages.showErrorDialog(
                     mainPanel,
                     "Database or connection not defined.",

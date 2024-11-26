@@ -11,7 +11,6 @@ import com.intellij.openapi.vfs.VirtualFile;
 import handler.ProjectGenerationContext;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.plugin.genesis.wizards.InitializationWizardStep;
 
 public class GenesisApiModuleBuilder extends ModuleBuilder {
     private final static GenesisApiModuleType moduleType = new GenesisApiModuleType();
@@ -33,8 +32,11 @@ public class GenesisApiModuleBuilder extends ModuleBuilder {
     @Nullable
     @Override
     public ModuleWizardStep getCustomOptionsStep(WizardContext context, Disposable parentDisposable) {
-        return new InitializationWizardStep(projectGenerationContext);
+        /*SpecificConfigurationWizardStep specificConfigurationWizardStep = new SpecificConfigurationWizardStep(projectGenerationContext);
+        return new InitializationWizardStep(projectGenerationContext, specificConfigurationWizardStep);*/
+        return null;
     }
+
 
     @Override
     public ModuleType<?> getModuleType() {

@@ -34,10 +34,6 @@ public class GenerationOptionWizardStep extends ModuleWizardStep {
             projectGenerationContext.setGenerationOptions(selectedComponent);
         }
 
-        // Store groupId and full project generation flag
-        String groupId = generationOptionForm.getGroupIdField().getText().trim();
-        projectGenerationContext.setGroupLink(groupId);
-        projectGenerationContext.setGenerateProjectStructure(generationOptionForm.getGenerateTheFullProjectCheckBox().isSelected());
     }
 
     @Override

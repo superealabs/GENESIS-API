@@ -14,11 +14,12 @@ import java.util.Map;
 public class InitializationWizardStep extends ModuleWizardStep {
     private final InitializationForm newProjectPanel;
     private final ProjectGenerationContext projectGenerationContext;
+    public final SpecificConfigurationWizardStep specificConfigurationWizardStep;
 
-
-    public InitializationWizardStep(ProjectGenerationContext projectGenerationContext) {
+    public InitializationWizardStep(ProjectGenerationContext projectGenerationContext, SpecificConfigurationWizardStep specificConfigurationWizardStep) {
         newProjectPanel = new InitializationForm();
         this.projectGenerationContext = projectGenerationContext;
+        this.specificConfigurationWizardStep = specificConfigurationWizardStep;
     }
 
     @Override
@@ -31,6 +32,7 @@ public class InitializationWizardStep extends ModuleWizardStep {
 
         // Récupérer les valeurs depuis le formulaire
         String projectName = newProjectPanel.getProjectNameField().getText().trim();
+        String groupId = newProjectPanel.getGroupIdField().getText().trim();
         String location = newProjectPanel.getLocationField().getText().trim();
         Language language = (Language) newProjectPanel.getLanguageOptions().getSelectedItem();
         String languageVersion = (String) newProjectPanel.getLanguageVersionOptions().getSelectedItem();
@@ -46,14 +48,17 @@ public class InitializationWizardStep extends ModuleWizardStep {
                 .setDestinationFolder(location)
                 .setLanguage(language)
                 .setFramework(framework)
-                .setProject(buildTool);
+                .setProject(buildTool)
+                .setGroupLink(groupId);
 
+        specificConfigurationWizardStep.onFrameworkSelected(framework);
     }
 
     @Override
     public boolean validate() throws ConfigurationException {
         // Retrieve selected values
         String projectName = newProjectPanel.getProjectNameField().getText().trim();
+        String groupId = newProjectPanel.getGroupIdField().getText().trim();
         String location = newProjectPanel.getLocationField().getText().trim();
         Language language = (Language) newProjectPanel.getLanguageOptions().getSelectedItem();
         String languageVersion = (String) newProjectPanel.getLanguageVersionOptions().getSelectedItem();
@@ -65,6 +70,15 @@ public class InitializationWizardStep extends ModuleWizardStep {
         if (projectName.isEmpty()) {
             throw new ConfigurationException("The project name cannot be empty.");
         }
+
+        // Validate the group id
+        if (groupId.isEmpty()) {
+            assert projectType != null;
+            if (projectType.getWithGroupId()) {
+                throw new ConfigurationException("The group id cannot be empty.");
+            }
+        }
+
         if (!projectName.matches("^[a-zA-Z0-9_]+$")) {
             throw new ConfigurationException("""
                         The project name must be a single word containing only letters, numbers, and underscores.

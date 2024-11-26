@@ -11,7 +11,6 @@ import org.plugin.genesis.forms.DatabaseConfigurationForm;
 
 import javax.swing.*;
 
-
 import static org.plugin.genesis.Utils.formatErrorMessageHtml;
 
 public class DatabaseConfigurationWizardStep extends ModuleWizardStep {

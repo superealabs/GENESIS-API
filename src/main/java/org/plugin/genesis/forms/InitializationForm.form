@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.plugin.genesis.forms.InitializationForm">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="10" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="30" left="30" bottom="30" right="30"/>
     <constraints>
-      <xy x="25" y="59" width="437" height="444"/>
+      <xy x="25" y="59" width="437" height="465"/>
     </constraints>
     <properties/>
     <border type="empty">
@@ -97,20 +97,9 @@
           <text value="Language version:"/>
         </properties>
       </component>
-      <component id="cc9ad" class="javax.swing.JLabel" binding="frameworkLabel">
-        <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="68" height="15"/>
-          </grid>
-        </constraints>
-        <properties>
-          <labelFor value="a38a1"/>
-          <text value="Framework:"/>
-        </properties>
-      </component>
       <vspacer id="619de">
         <constraints>
-          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
             <preferred-size width="196" height="14"/>
           </grid>
         </constraints>
@@ -122,14 +111,6 @@
         <properties>
           <text value="Project type:"/>
         </properties>
-      </component>
-      <component id="b6bdb" class="javax.swing.JComboBox" binding="frameworkOptions">
-        <constraints>
-          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="250" height="34"/>
-          </grid>
-        </constraints>
-        <properties/>
       </component>
       <component id="cb063" class="javax.swing.JLabel" binding="buildToolLabel">
         <constraints>
@@ -149,6 +130,60 @@
           </grid>
         </constraints>
         <properties/>
+      </component>
+      <component id="cc9ad" class="javax.swing.JLabel" binding="frameworkLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="68" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <labelFor value="a38a1"/>
+          <text value="Framework:"/>
+        </properties>
+      </component>
+      <component id="46f38" class="javax.swing.JLabel" binding="frameworkVersionLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Framework version:"/>
+        </properties>
+      </component>
+      <component id="b6bdb" class="javax.swing.JComboBox" binding="frameworkOptions">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="250" height="34"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="12726" class="javax.swing.JComboBox" binding="frameworkVersionOptions">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="100" height="34"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="cf12a" class="javax.swing.JLabel" binding="groupIdLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="5307c"/>
+          <text value="Group id:"/>
+        </properties>
+      </component>
+      <component id="e7068" class="javax.swing.JTextField" binding="groupIdField">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="250" height="34"/>
+          </grid>
+        </constraints>
+        <properties>
+          <toolTipText value=""/>
+        </properties>
       </component>
     </children>
   </grid>
