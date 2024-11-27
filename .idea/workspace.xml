@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="" />
+    <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/GENESIS-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/SpecificConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/SpecificConfigurationWizardStep.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,13 +115,13 @@
     "Maven.GENESIS [package,-DskipTests...].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "452",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "false",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "321",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/nomena/STAGE/GENESIS-Plugin/libs",
+    "last_opened_file_path": "/Users/nomena/STAGE/GENESIS-Plugin/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,7 +130,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "fileTemplates",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -136,8 +144,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/icons" />
     </key>
@@ -154,13 +162,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.Run">
-    <configuration name="GenesisApiCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GenesisApiCLI" />
-      <module name="GENESIS" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Build" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -205,34 +206,14 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ProjectGeneratorCLI.generateProjectSpring" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GENESIS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="project" />
-      <option name="MAIN_CLASS_NAME" value="project.ProjectGeneratorCLI" />
-      <option name="METHOD_NAME" value="generateProjectSpring" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.GenesisApiCLI" />
       <item itemvalue="Gradle.Run" />
       <item itemvalue="Gradle.Clean" />
       <item itemvalue="Gradle.Build" />
-      <item itemvalue="JUnit.ProjectGeneratorCLI.generateProjectSpring" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Clean" />
-        <item itemvalue="Application.GenesisApiCLI" />
-        <item itemvalue="JUnit.ProjectGeneratorCLI.generateProjectSpring" />
         <item itemvalue="Gradle.Build" />
       </list>
     </recent_temporary>
@@ -282,6 +263,7 @@
       <workItem from="1732443948562" duration="1329000" />
       <workItem from="1732451102804" duration="20901000" />
       <workItem from="1732479965207" duration="18355000" />
+      <workItem from="1732650375609" duration="14674000" />
     </task>
     <servers />
   </component>
@@ -303,7 +285,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/SpecificConfigurationWizardStep.java</url>
-          <line>68</line>
+          <line>70</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
