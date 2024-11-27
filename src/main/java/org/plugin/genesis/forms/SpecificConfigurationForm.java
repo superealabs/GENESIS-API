@@ -41,7 +41,6 @@ public class SpecificConfigurationForm {
     private JLabel roleLabel;
     private JTextField roleField;
 
-
     public void initializeForm() {
         // Masquer tous les composants dépendants au début
         hideAllDependentComponents();
@@ -52,6 +51,11 @@ public class SpecificConfigurationForm {
         // Configurer la table de routes et les boutons
         initializeRouteConfigurationTable();
         configureRouteButtons();
+
+        // Afficher les composants toujours visibles
+        loggingLevelLabel.setVisible(true);
+        loggingLevelOptions.setVisible(true);
+        useAnEurekaServerCheckBox.setVisible(true);
     }
 
     public void updateFormWithFramework(Framework framework) {
@@ -63,7 +67,8 @@ public class SpecificConfigurationForm {
 
             if (framework.getIsGateway()) {
                 configureGatewayComponents();
-            } else if (frameworkUsesDatabase(framework)) {
+            }
+            if (frameworkUsesDatabase(framework)) {
                 configureDatabaseComponents(framework);
             }
         }
@@ -71,23 +76,23 @@ public class SpecificConfigurationForm {
 
     private void hideAllDependentComponents() {
         // Masquer les composants de Gateway
+        scrollPaneRouteTable.setVisible(false);
         routeConfigurationLabel.setVisible(false);
         routeConfigurationOption.setVisible(false);
         addRouteButton.setVisible(false);
         removeRouteButton.setVisible(false);
+        defaultUsernameLabel.setVisible(false);
+        usernameField.setVisible(false);
+        passwordLabel.setVisible(false);
+        passwordField.setVisible(false);
+        roleLabel.setVisible(false);
+        roleField.setVisible(false);
 
         // Masquer les composants de base de données
         hibernateDDLAutoLabel.setVisible(false);
         ddlAutoOptions.setVisible(false);
 
-        // Masquer les champs d'authentification
-        defaultUsernameLabel.setVisible(false);
-        usernameField.setVisible(false);
-        passwordLabel.setVisible(false);
-        passwordField.setVisible(false);
-
         // Désactiver Eureka par défaut
-        useAnEurekaServerCheckBox.setSelected(false);
         eurekaServerHostField.setEnabled(false);
     }
 
@@ -110,6 +115,7 @@ public class SpecificConfigurationForm {
     }
 
     private void configureGatewayComponents() {
+        scrollPaneRouteTable.setVisible(true);
         routeConfigurationLabel.setVisible(true);
         routeConfigurationOption.setVisible(true);
         addRouteButton.setVisible(true);
@@ -119,6 +125,8 @@ public class SpecificConfigurationForm {
         usernameField.setVisible(true);
         passwordLabel.setVisible(true);
         passwordField.setVisible(true);
+        roleLabel.setVisible(true);
+        roleField.setVisible(true);
     }
 
     private void configureDatabaseComponents(Framework framework) {
@@ -152,24 +160,17 @@ public class SpecificConfigurationForm {
         routeConfigurationOption.setModel(model);
 
         // Personnaliser les couleurs de sélection
-        // Définition de la couleur de sélection pour les thèmes clair et sombre
-        Color selectionColor = new JBColor(new Color(173, 216, 230), new Color(0, 105, 148)); // Bleu clair pour le thème clair, bleu foncé pour le thème sombre
-
-        // Application de la couleur de sélection au tableau
+        Color selectionColor = new JBColor(new Color(173, 216, 230), new Color(0, 105, 148));
         routeConfigurationOption.setSelectionBackground(selectionColor);
-        routeConfigurationOption.setSelectionForeground(JBColor.BLACK); // Texte noir
+        routeConfigurationOption.setSelectionForeground(JBColor.BLACK);
 
-        // Attacher la table au scroll pane
         scrollPaneRouteTable.setViewportView(routeConfigurationOption);
     }
 
     private void configureRouteButtons() {
         DefaultTableModel model = (DefaultTableModel) routeConfigurationOption.getModel();
 
-        // Bouton pour ajouter une ligne
         addRouteButton.addActionListener(e -> model.addRow(new Object[]{"", "", "", ""}));
-
-        // Bouton pour supprimer une ligne sélectionnée
         removeRouteButton.addActionListener(e -> {
             int selectedRow = routeConfigurationOption.getSelectedRow();
             if (selectedRow != -1) {
@@ -198,5 +199,4 @@ public class SpecificConfigurationForm {
         }
         return routes;
     }
-
 }

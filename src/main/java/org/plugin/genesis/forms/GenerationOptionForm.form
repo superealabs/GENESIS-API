@@ -10,7 +10,7 @@
     <children>
       <component id="a03df" class="javax.swing.JLabel" binding="tableAvailableLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Tables available:"/>
@@ -38,16 +38,6 @@
           <text value="Refresh"/>
         </properties>
       </component>
-      <component id="78525" class="com.intellij.ui.components.JBList" binding="tableNamesList">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <model>
-            <item value="No tables available for selection"/>
-          </model>
-        </properties>
-      </component>
       <component id="dc40f" class="com.intellij.ui.components.JBList" binding="componentChoice">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
@@ -60,6 +50,16 @@
             <item value="Controller"/>
           </model>
           <selectionMode value="2"/>
+        </properties>
+      </component>
+      <component id="78525" class="com.intellij.ui.components.JBList" binding="tableNamesList">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="No tables available for selection"/>
+          </model>
         </properties>
       </component>
     </children>

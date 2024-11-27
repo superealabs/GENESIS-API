@@ -29,7 +29,6 @@ public class InitializationWizardStep extends ModuleWizardStep {
 
     @Override
     public void updateDataModel() {
-
         // Récupérer les valeurs depuis le formulaire
         String projectName = newProjectPanel.getProjectNameField().getText().trim();
         String groupId = newProjectPanel.getGroupIdField().getText().trim();
@@ -41,6 +40,7 @@ public class InitializationWizardStep extends ModuleWizardStep {
         Project buildTool = (Project) newProjectPanel.getBuildToolOptions().getSelectedItem();
 
         assert languageVersion != null;
+        assert frameworkVersion != null;
         Map<String, Object> languageConfiguration = Map.of(
                 "languageVersion", languageVersion,
                 "frameworkVersion", frameworkVersion
