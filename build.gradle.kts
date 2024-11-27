@@ -11,7 +11,7 @@ repositories {
     mavenCentral()
     maven("https://www.jetbrains.com/intellij-repository/releases")
     flatDir {
-        dirs("libs")
+        dirs("lib")
     }
 }
 
@@ -28,7 +28,7 @@ dependencies {
     testCompileOnly("org.projectlombok:lombok:1.18.36")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.36")
     // Inclusion de tous les JARs du dossier lib
-    implementation(fileTree("libs") { include("*.jar") })
+    implementation(fileTree("lib") { include("*.jar") })
 }
 
 tasks {

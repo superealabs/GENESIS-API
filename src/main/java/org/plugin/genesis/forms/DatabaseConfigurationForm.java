@@ -197,16 +197,13 @@ public class DatabaseConfigurationForm {
 
 
     private void updateFieldsForDatabase(Database database) {
+        trustCertificateCheckBox.setEnabled(false);
+        useSSLCheckBox.setEnabled(false);
+        allowKeyRetrievalCheckBox.setEnabled(false);
+
         // Adjust visible fields based on the selected database
-        boolean isMySQL = "MySQL".equalsIgnoreCase(database.getName());
         boolean isOracle = "Oracle".equalsIgnoreCase(database.getName());
-        boolean isSQLServer = "SQL Server".equalsIgnoreCase(database.getName());
-
-        // Enable/disable specific fields
-        trustCertificateCheckBox.setEnabled(isMySQL || isOracle || isSQLServer);
-        useSSLCheckBox.setEnabled(isMySQL || isOracle || isSQLServer);
-        allowKeyRetrievalCheckBox.setEnabled(isMySQL);
-
+        
         driverNameField.setEnabled(isOracle);
         sidField.setEnabled(isOracle);
 

@@ -93,6 +93,7 @@ public class SpecificConfigurationForm {
         ddlAutoOptions.setVisible(false);
 
         // Désactiver Eureka par défaut
+        useAnEurekaServerCheckBox.setSelected(false);
         eurekaServerHostField.setEnabled(false);
     }
 
