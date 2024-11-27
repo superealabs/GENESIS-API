@@ -192,7 +192,7 @@
           </grid>
         </constraints>
         <properties>
-          <foreground color="-4802117"/>
+          <foreground color="-16777216"/>
         </properties>
         <border type="etched">
           <font name="JetBrains Mono" size="12" style="1"/>
@@ -211,8 +211,9 @@
               <editingColumn value="30"/>
               <editingRow value="30"/>
               <fillsViewportHeight value="false"/>
+              <foreground color="-16777216"/>
               <gridColor color="-4802117"/>
-              <inheritsPopupMenu value="true"/>
+              <inheritsPopupMenu value="false"/>
               <intercellSpacing width="1" height="2"/>
               <minimumSize width="30" height="30"/>
               <name value=""/>
@@ -220,6 +221,10 @@
               <preferredSize width="-1" height="150"/>
               <rowHeight value="25"/>
               <rowMargin value="2"/>
+              <selectionBackground color="-1312001"/>
+              <selectionForeground color="-16777216"/>
+              <showVerticalLines value="true"/>
+              <surrendersFocusOnKeystroke value="true"/>
             </properties>
           </component>
         </children>

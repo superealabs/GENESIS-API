@@ -1,11 +1,13 @@
 package org.plugin.genesis.forms;
 
 import com.intellij.openapi.ui.Messages;
+import com.intellij.ui.JBColor;
 import genesis.config.langage.Framework;
 import lombok.Getter;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -148,6 +150,14 @@ public class SpecificConfigurationForm {
         // Ajouter une ligne initiale
         model.addRow(new Object[]{"", "", "", ""});
         routeConfigurationOption.setModel(model);
+
+        // Personnaliser les couleurs de sélection
+        // Définition de la couleur de sélection pour les thèmes clair et sombre
+        Color selectionColor = new JBColor(new Color(173, 216, 230), new Color(0, 105, 148)); // Bleu clair pour le thème clair, bleu foncé pour le thème sombre
+
+        // Application de la couleur de sélection au tableau
+        routeConfigurationOption.setSelectionBackground(selectionColor);
+        routeConfigurationOption.setSelectionForeground(JBColor.BLACK); // Texte noir
 
         // Attacher la table au scroll pane
         scrollPaneRouteTable.setViewportView(routeConfigurationOption);
