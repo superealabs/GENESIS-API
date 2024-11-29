@@ -1,4 +1,4 @@
-package org.plugin.genesis;
+package org.labs.genesis;
 
 public class Utils {
     public static String formatErrorMessage(String message) {

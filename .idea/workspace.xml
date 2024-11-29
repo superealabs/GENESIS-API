@@ -6,8 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/DatabaseConfigurationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/DatabaseConfigurationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/GenerationOptionForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/GenerationOptionForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/InitializationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/InitializationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/icon/SdkIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/icon/SdkIcons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/module/GenesisApiModuleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/module/GenesisApiModuleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/DatabaseConfigurationWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/GenerationOptionWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/GenerationOptionWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/InitializationWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/SpecificConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/SpecificConfigurationWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/InitConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/conditionals/InitConditionalWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +56,16 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
+                <item name="GENESIS-API" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
+                <item name="GENESIS-API" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GENESIS-Plugin" type="f1a62948:ProjectNode" />
+                <item name="GENESIS-API" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -67,6 +86,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nomena-1918&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/superealabs/GENESIS-Plugin.git&quot;,
+    &quot;accountId&quot;: &quot;73b01dfb-f949-4eb7-a14d-3f3173764032&quot;
+  }
+}</component>
   <component name="KotlinScriptingSettings">
     <option name="suppressDefinitionsCheck" value="true" />
   </component>
@@ -117,7 +148,7 @@
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;266&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nomena/STAGE/GENESIS-Plugin/lib&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nomena/STAGE/GENESIS-Plugin/libs&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -140,8 +171,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/libs" />
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/icons" />
     </key>
@@ -157,7 +188,7 @@
       <command value="mvn package -DskipTests -Dmaven.test.skip=true" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Run">
+  <component name="RunManager" selected="Gradle.GENESIS-Plugin [build]">
     <configuration name="Build" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -202,13 +233,37 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="GENESIS-Plugin [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Gradle.Run" />
+      <item itemvalue="Gradle.GENESIS-Plugin [build]" />
       <item itemvalue="Gradle.Clean" />
       <item itemvalue="Gradle.Build" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GENESIS-Plugin [build]" />
         <item itemvalue="Gradle.Clean" />
         <item itemvalue="Gradle.Build" />
       </list>
@@ -260,6 +315,12 @@
       <workItem from="1732451102804" duration="20901000" />
       <workItem from="1732479965207" duration="18355000" />
       <workItem from="1732650375609" duration="17342000" />
+      <workItem from="1732684076877" duration="4513000" />
+      <workItem from="1732695596931" duration="81000" />
+      <workItem from="1732704430379" duration="3635000" />
+      <workItem from="1732774429494" duration="3877000" />
+      <workItem from="1732792665290" duration="3161000" />
+      <workItem from="1732827046988" duration="7000" />
     </task>
     <servers />
   </component>
@@ -275,14 +336,34 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/DatabaseConfigurationWizardStep.java</url>
           <line>99</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/SpecificConfigurationWizardStep.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/SpecificConfigurationWizardStep.java</url>
           <line>70</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/SpecificConfigurationWizardStep.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/InitializationWizardStep.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

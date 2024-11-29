@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "GENESIS-Plugin"
+rootProject.name = "GENESIS-API"

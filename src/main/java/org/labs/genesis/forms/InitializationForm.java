@@ -1,4 +1,4 @@
-package org.plugin.genesis.forms;
+package org.labs.genesis.forms;
 
 import com.intellij.openapi.fileChooser.FileChooserDescriptor;
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;

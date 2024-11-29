@@ -1,4 +1,4 @@
-package org.plugin.genesis.wizards;
+package org.labs.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.openapi.options.ConfigurationException;
@@ -6,7 +6,7 @@ import genesis.config.langage.Framework;
 import genesis.config.langage.Language;
 import genesis.config.langage.Project;
 import handler.ProjectGenerationContext;
-import org.plugin.genesis.forms.InitializationForm;
+import org.labs.genesis.forms.InitializationForm;
 
 import javax.swing.*;
 import java.util.Map;

@@ -1,16 +1,16 @@
-package org.plugin.genesis.wizards;
+package org.labs.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.ui.Messages;
 import handler.ProjectGenerationContext;
-import org.plugin.genesis.forms.GenerationOptionForm;
+import org.labs.genesis.forms.GenerationOptionForm;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.plugin.genesis.forms.GenerationOptionForm.SELECT_ALL;
+import static org.labs.genesis.forms.GenerationOptionForm.SELECT_ALL;
 
 public class GenerationOptionWizardStep extends ModuleWizardStep {
     private final GenerationOptionForm generationOptionForm;

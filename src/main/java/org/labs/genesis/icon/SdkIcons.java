@@ -1,4 +1,4 @@
-package org.plugin.genesis.icon;
+package org.labs.genesis.icon;
 
 import com.intellij.openapi.util.IconLoader;
 

@@ -3,7 +3,7 @@
  * Copyright (c) 2024 nomena
  */
 
-package org.plugin.genesis.wizards.conditionals;
+package org.labs.genesis.wizards.conditionals;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import genesis.config.langage.Framework;

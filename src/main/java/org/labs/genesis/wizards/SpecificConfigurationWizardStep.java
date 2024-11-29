@@ -1,11 +1,11 @@
-package org.plugin.genesis.wizards;
+package org.labs.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.openapi.options.ConfigurationException;
 import genesis.config.langage.Framework;
 import genesis.config.langage.generator.project.ProjectGenerator;
 import handler.ProjectGenerationContext;
-import org.plugin.genesis.forms.SpecificConfigurationForm;
+import org.labs.genesis.forms.SpecificConfigurationForm;
 
 import javax.swing.*;
 import java.util.HashMap;

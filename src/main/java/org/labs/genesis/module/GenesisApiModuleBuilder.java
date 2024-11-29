@@ -1,4 +1,4 @@
-package org.plugin.genesis.module;
+package org.labs.genesis.module;
 
 import com.intellij.ide.util.projectWizard.ModuleBuilder;
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;

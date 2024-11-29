@@ -3,7 +3,7 @@
  * Copyright (c) 2024 nomena
  */
 
-package org.plugin.genesis.forms;
+package org.labs.genesis.forms;
 
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.JBColor;
@@ -19,8 +19,8 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.event.ActionListener;
 
-import static org.plugin.genesis.Utils.formatErrorMessage;
-import static org.plugin.genesis.Utils.formatErrorMessageHtml;
+import static org.labs.genesis.Utils.formatErrorMessage;
+import static org.labs.genesis.Utils.formatErrorMessageHtml;
 
 @Getter
 public class DatabaseConfigurationForm {
@@ -203,7 +203,7 @@ public class DatabaseConfigurationForm {
 
         // Adjust visible fields based on the selected database
         boolean isOracle = "Oracle".equalsIgnoreCase(database.getName());
-        
+
         driverNameField.setEnabled(isOracle);
         sidField.setEnabled(isOracle);
 

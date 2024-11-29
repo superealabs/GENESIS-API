@@ -1,4 +1,4 @@
-package org.plugin.genesis.forms;
+package org.labs.genesis.forms;
 
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.components.JBList;
