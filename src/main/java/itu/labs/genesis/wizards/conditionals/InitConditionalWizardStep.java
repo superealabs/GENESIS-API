@@ -1,4 +1,9 @@
-package org.labs.genesis.wizards.conditionals;
+/**
+ * MIT License
+ * Copyright (c) 2024 nomena
+ */
+
+package itu.labs.genesis.wizards.conditionals;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import genesis.config.langage.Framework;
@@ -6,12 +11,12 @@ import handler.ProjectGenerationContext;
 
 import javax.swing.*;
 
-public class GenConfigConditionalWizardStep extends ModuleWizardStep {
+public class InitConditionalWizardStep extends ModuleWizardStep {
     private final ProjectGenerationContext context;
     private final ModuleWizardStep actualStep;
 
-    public GenConfigConditionalWizardStep(ProjectGenerationContext projectGenerationContext, ModuleWizardStep actualStep) {
-        this.context = projectGenerationContext;
+    public InitConditionalWizardStep(ProjectGenerationContext context, ModuleWizardStep actualStep) {
+        this.context = context;
         this.actualStep = actualStep;
     }
 
@@ -34,7 +39,8 @@ public class GenConfigConditionalWizardStep extends ModuleWizardStep {
     @Override
     public boolean isStepVisible() {
         Framework framework = context.getFramework();
-        return framework != null && framework.getUseDB();
+        return framework != null
+                && framework.getUseDB();
     }
 
 }

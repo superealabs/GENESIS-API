@@ -1,4 +1,4 @@
-package org.labs.genesis;
+package itu.labs.genesis;
 
 public class Utils {
     public static String formatErrorMessage(String message) {

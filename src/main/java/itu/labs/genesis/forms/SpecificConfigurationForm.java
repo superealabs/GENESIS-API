@@ -1,4 +1,4 @@
-package org.labs.genesis.forms;
+package itu.labs.genesis.forms;
 
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.JBColor;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.labs.genesis.wizards.SpecificConfigurationWizardStep.frameworkHasConfiguration;
+import static itu.labs.genesis.wizards.SpecificConfigurationWizardStep.frameworkHasConfiguration;
 
 @Getter
 public class SpecificConfigurationForm {

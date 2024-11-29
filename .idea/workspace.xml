@@ -5,27 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/DatabaseConfigurationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/DatabaseConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/DatabaseConfigurationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/GenerationOptionForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/GenerationOptionForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/GenerationOptionForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/InitializationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/InitializationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/InitializationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/forms/SpecificConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/icon/SdkIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/icon/SdkIcons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/module/GenesisApiModuleBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/module/GenesisApiModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/module/GenesisApiModuleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/DatabaseConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/DatabaseConfigurationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/GenerationOptionWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/GenerationOptionWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/InitializationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/InitializationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/SpecificConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/SpecificConfigurationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/plugin/genesis/wizards/conditionals/InitConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/conditionals/InitConditionalWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/DatabaseConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/DatabaseConfigurationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/DatabaseConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/DatabaseConfigurationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/GenerationOptionForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/GenerationOptionForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/GenerationOptionForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/GenerationOptionForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/InitializationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/InitializationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/InitializationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/InitializationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/SpecificConfigurationForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/SpecificConfigurationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/icon/SdkIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/icon/SdkIcons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/module/GenesisApiModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/module/GenesisApiModuleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/module/GenesisApiModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/module/GenesisApiModuleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/DatabaseConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/DatabaseConfigurationWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/GenerationOptionWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/GenerationOptionWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/InitializationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/InitializationWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/SpecificConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/SpecificConfigurationWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/conditionals/InitConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/conditionals/InitConditionalWizardStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,12 +90,12 @@
     &quot;assignee&quot;: &quot;Nomena-1918&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/superealabs/GENESIS-Plugin.git&quot;,
-    &quot;accountId&quot;: &quot;73b01dfb-f949-4eb7-a14d-3f3173764032&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/superealabs/GENESIS-API.git",
+    "accountId": "73b01dfb-f949-4eb7-a14d-3f3173764032"
   }
-}</component>
+}]]></component>
   <component name="KotlinScriptingSettings">
     <option name="suppressDefinitionsCheck" value="true" />
   </component>
@@ -321,6 +319,7 @@
       <workItem from="1732774429494" duration="3877000" />
       <workItem from="1732792665290" duration="3161000" />
       <workItem from="1732827046988" duration="7000" />
+      <workItem from="1732862847070" duration="335000" />
     </task>
     <servers />
   </component>
@@ -336,32 +335,32 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/DatabaseConfigurationWizardStep.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/DatabaseConfigurationWizardStep.java</url>
           <line>99</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/SpecificConfigurationWizardStep.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/SpecificConfigurationWizardStep.java</url>
           <line>70</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/SpecificConfigurationForm.java</url>
           <line>48</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/SpecificConfigurationForm.java</url>
           <line>63</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/SpecificConfigurationWizardStep.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/SpecificConfigurationWizardStep.java</url>
           <line>25</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/InitializationWizardStep.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/InitializationWizardStep.java</url>
           <line>55</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>

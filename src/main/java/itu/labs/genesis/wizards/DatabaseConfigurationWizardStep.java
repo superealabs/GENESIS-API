@@ -1,4 +1,4 @@
-package org.labs.genesis.wizards;
+package itu.labs.genesis.wizards;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.openapi.options.ConfigurationException;
@@ -7,11 +7,11 @@ import com.intellij.ui.JBColor;
 import genesis.connexion.Credentials;
 import genesis.connexion.Database;
 import handler.ProjectGenerationContext;
-import org.labs.genesis.forms.DatabaseConfigurationForm;
+import itu.labs.genesis.forms.DatabaseConfigurationForm;
 
 import javax.swing.*;
 
-import static org.labs.genesis.Utils.formatErrorMessageHtml;
+import static itu.labs.genesis.Utils.formatErrorMessageHtml;
 
 public class DatabaseConfigurationWizardStep extends ModuleWizardStep {
     private final DatabaseConfigurationForm databaseConfigurationForm;

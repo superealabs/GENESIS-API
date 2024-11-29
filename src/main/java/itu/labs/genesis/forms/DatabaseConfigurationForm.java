@@ -3,7 +3,7 @@
  * Copyright (c) 2024 nomena
  */
 
-package org.labs.genesis.forms;
+package itu.labs.genesis.forms;
 
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.JBColor;
@@ -19,8 +19,8 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.event.ActionListener;
 
-import static org.labs.genesis.Utils.formatErrorMessage;
-import static org.labs.genesis.Utils.formatErrorMessageHtml;
+import static itu.labs.genesis.Utils.formatErrorMessage;
+import static itu.labs.genesis.Utils.formatErrorMessageHtml;
 
 @Getter
 public class DatabaseConfigurationForm {

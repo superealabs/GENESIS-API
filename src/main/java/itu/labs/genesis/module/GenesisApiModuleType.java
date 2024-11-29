@@ -1,21 +1,21 @@
-package org.labs.genesis.module;
+package itu.labs.genesis.module;
 
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.ide.util.projectWizard.WizardContext;
 import com.intellij.openapi.module.ModuleType;
 import com.intellij.openapi.roots.ui.configuration.ModulesProvider;
 import org.jetbrains.annotations.NotNull;
-import org.labs.genesis.icon.SdkIcons;
-import org.labs.genesis.wizards.DatabaseConfigurationWizardStep;
-import org.labs.genesis.wizards.GenerationOptionWizardStep;
-import org.labs.genesis.wizards.InitializationWizardStep;
-import org.labs.genesis.wizards.SpecificConfigurationWizardStep;
-import org.labs.genesis.wizards.conditionals.GenConfigConditionalWizardStep;
-import org.labs.genesis.wizards.conditionals.InitConditionalWizardStep;
+import itu.labs.genesis.icon.SdkIcons;
+import itu.labs.genesis.wizards.DatabaseConfigurationWizardStep;
+import itu.labs.genesis.wizards.GenerationOptionWizardStep;
+import itu.labs.genesis.wizards.InitializationWizardStep;
+import itu.labs.genesis.wizards.SpecificConfigurationWizardStep;
+import itu.labs.genesis.wizards.conditionals.GenConfigConditionalWizardStep;
+import itu.labs.genesis.wizards.conditionals.InitConditionalWizardStep;
 
 import javax.swing.*;
 
-import static org.labs.genesis.module.GenesisApiModuleBuilder.projectGenerationContext;
+import static itu.labs.genesis.module.GenesisApiModuleBuilder.projectGenerationContext;
 
 final class GenesisApiModuleType extends ModuleType<GenesisApiModuleBuilder> {
     private static final String ID = "GENESIS_API_MODULE_TYPE";

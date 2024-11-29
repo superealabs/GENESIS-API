@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>org.labs.genesis</id>
+    <id>itu.labs.genesis</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
@@ -24,11 +24,14 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <moduleBuilder builderClass="org.labs.genesis.module.GenesisApiModuleBuilder"
+        <moduleBuilder builderClass="org.itu.genesis.module.GenesisApiModuleBuilder"
                        id="GENESIS_API_MODULE_TYPE"
                        order="first"/>
     </extensions>
 
 </idea-plugin>
+
+
+
 
 
