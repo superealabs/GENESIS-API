@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcb73f2-7f8f-4054-8384-8ed790f5a542" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/DatabaseConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/DatabaseConfigurationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/DatabaseConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/DatabaseConfigurationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/GenerationOptionForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/GenerationOptionForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/GenerationOptionForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/GenerationOptionForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/InitializationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/InitializationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/InitializationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/InitializationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/SpecificConfigurationForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/forms/SpecificConfigurationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/forms/SpecificConfigurationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/icon/SdkIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/icon/SdkIcons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/module/GenesisApiModuleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/module/GenesisApiModuleBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/module/GenesisApiModuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/module/GenesisApiModuleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/DatabaseConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/DatabaseConfigurationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/GenerationOptionWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/GenerationOptionWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/InitializationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/InitializationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/SpecificConfigurationWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/SpecificConfigurationWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/conditionals/GenConfigConditionalWizardStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/labs/genesis/wizards/conditionals/InitConditionalWizardStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itu/labs/genesis/wizards/conditionals/InitConditionalWizardStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,12 +72,12 @@
     &quot;assignee&quot;: &quot;Nomena-1918&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/superealabs/GENESIS-API.git",
-    "accountId": "73b01dfb-f949-4eb7-a14d-3f3173764032"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/superealabs/GENESIS-API.git&quot;,
+    &quot;accountId&quot;: &quot;73b01dfb-f949-4eb7-a14d-3f3173764032&quot;
   }
-}]]></component>
+}</component>
   <component name="KotlinScriptingSettings">
     <option name="suppressDefinitionsCheck" value="true" />
   </component>
@@ -118,55 +100,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GenesisApiCLI.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build demo.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Clean.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GENESIS-Plugin [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GENESIS-Plugin [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GENESIS-Plugin [init].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GENESIS-Plugin [setupDependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Run Plugin.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Run.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.demo [buildPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.demo [setupDependencies].executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProjectGeneratorCLI.generateProjectSpring.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin script (Beta).build.gradle.kts.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.GENESIS [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.GENESIS [package,-DskipTests...].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;286&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;266&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nomena/STAGE/GENESIS-Plugin/libs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.GenesisApiCLI.executor": "Run",
+    "Gradle.Build demo.executor": "Run",
+    "Gradle.Build.executor": "Run",
+    "Gradle.Clean.executor": "Run",
+    "Gradle.GENESIS-Plugin [build].executor": "Run",
+    "Gradle.GENESIS-Plugin [clean].executor": "Run",
+    "Gradle.GENESIS-Plugin [init].executor": "Run",
+    "Gradle.GENESIS-Plugin [setupDependencies].executor": "Run",
+    "Gradle.Run Plugin.executor": "Run",
+    "Gradle.Run.executor": "Run",
+    "Gradle.Upgrade Gradle wrapper.executor": "Run",
+    "Gradle.demo [buildPlugin].executor": "Run",
+    "Gradle.demo [setupDependencies].executor": "Run",
+    "JUnit.ProjectGeneratorCLI.generateProjectSpring.executor": "Run",
+    "Kotlin script (Beta).build.gradle.kts.executor": "Run",
+    "Maven.GENESIS [clean].executor": "Run",
+    "Maven.GENESIS [package,-DskipTests...].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "286",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "266",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/nomena/STAGE/GENESIS-Plugin/libs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;redshift&quot;,
-      &quot;mysql_aurora&quot;,
-      &quot;postgresql&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "redshift",
+      "mysql_aurora",
+      "postgresql",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/libs" />
@@ -186,7 +168,7 @@
       <command value="mvn package -DskipTests -Dmaven.test.skip=true" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.GENESIS-Plugin [build]">
+  <component name="RunManager" selected="Gradle.Run">
     <configuration name="Build" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -319,7 +301,9 @@
       <workItem from="1732774429494" duration="3877000" />
       <workItem from="1732792665290" duration="3161000" />
       <workItem from="1732827046988" duration="7000" />
-      <workItem from="1732862847070" duration="335000" />
+      <workItem from="1732862847070" duration="3722000" />
+      <workItem from="1732871580206" duration="2215000" />
+      <workItem from="1733126615059" duration="246000" />
     </task>
     <servers />
   </component>
